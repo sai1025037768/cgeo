@@ -562,11 +562,16 @@ public class Settings {
     }
 
     public static void putBoolean(final int prefKeyId, final boolean value) {
+        putBooleanDirect(getKey(prefKeyId), value);
+    }
+
+    public static void putBooleanDirect(final String key, final boolean value) {
+
         if (sharedPrefs == null) {
             return;
         }
         final SharedPreferences.Editor edit = sharedPrefs.edit();
-        edit.putBoolean(getKey(prefKeyId), value);
+        edit.putBoolean(key, value);
         edit.apply();
     }
 
@@ -705,6 +710,14 @@ public class Settings {
 
     public static boolean isALCfoundStateManual() {
         return getBoolean(R.string.pref_foundstate_al, false);
+    }
+
+    public static boolean enableVtmSingleMarkerSymbol() {
+        return getBoolean(R.string.pref_vtm_single_marker_symbol, false);
+    }
+
+    public static boolean enableVtmMarkerAtlasUsage() {
+        return getBoolean(R.string.pref_vtm_marker_atlas_usage, false);
     }
 
     public static boolean enableFeatureUnifiedGeoItemLayer() {
@@ -865,6 +878,10 @@ public class Settings {
                 // do nothing except satisfy static code analysis
                 break;
         }
+    }
+
+    public static boolean getBuildings3D() {
+        return getBoolean(R.string.pref_buildingLayer3D, true);
     }
 
     public static boolean isAutotargetIndividualRoute() {
@@ -1200,6 +1217,11 @@ public class Settings {
         return sharedPrefs.getStringSet(getKey(R.string.pref_tileprovider_hidden), empty);
     }
 
+    @Nullable
+    public static String getUserDefinedTileProviderUri() {
+        return getString(R.string.pref_userDefinedTileProviderUri, null);
+    }
+
     public static void setMapLanguage(@Nullable final String language) {
         putString(R.string.pref_mapLanguage, StringUtils.isBlank(language) ? "" : language);
     }
@@ -1386,7 +1408,7 @@ public class Settings {
     }
 
     public static boolean isBrouterAutoTileDownloads() {
-        return getBoolean(R.string.pref_brouterAutoTileDownloads, false);
+        return getBoolean(R.string.pref_brouterAutoTileDownloads, true);
     }
 
     public static void setBrouterAutoTileDownloads(final boolean value) {
@@ -1707,6 +1729,10 @@ public class Settings {
 
     public static int getNearbySearchLimit() {
         return getInt(R.string.pref_nearbySearchLimit, 0);
+    }
+
+    public static int getCoordinateSearchLimit() {
+        return getInt(R.string.pref_coordSearchLimit, 0);
     }
 
     public static int getLogImageScale() {
@@ -2062,7 +2088,7 @@ public class Settings {
     }
 
     public static boolean useInternalRouting() {
-        return getBoolean(R.string.pref_useInternalRouting, false);
+        return getBoolean(R.string.pref_useInternalRouting, true);
     }
 
     public static boolean getBackupLoginData() {
@@ -2374,6 +2400,16 @@ public class Settings {
 
     public static String getSelectedGoogleMapTheme() {
         return getString(R.string.pref_google_map_theme, "DEFAULT");
+    }
+
+    public static boolean isGoogleMapOptionEnabled(final String option, final boolean defaultValue) {
+        final String key = getKey(R.string.pref_google_map_option_enabled) + "." + option;
+        return getBooleanDirect(key, defaultValue);
+    }
+
+    public static void setGoogleMapOptionEnabled(final String option, final boolean enabled) {
+        final String key = getKey(R.string.pref_google_map_option_enabled) + "." + option;
+        putBooleanDirect(key, enabled);
     }
 
     public static boolean getHintAsRot13() {

@@ -177,7 +177,7 @@ public class FormatGpx extends Formatter {
                 sb.append(" <wpt lon=\"").append(formatILon(hint.ilon)).append("\" lat=\"")
                         .append(formatILat(hint.ilat)).append("\">")
                         .append("<name>").append(hint.getMessageString()).append("</name>")
-                        .append("<sym>").append(hint.getSymbolString().toLowerCase()).append("</sym>")
+                        .append("<sym>").append(hint.getSymbolString().toLowerCase(Locale.ROOT)).append("</sym>")
                         .append("<type>").append(hint.getSymbolString()).append("</type>")
                         .append("</wpt>\n");
             }
@@ -529,7 +529,7 @@ public class FormatGpx extends Formatter {
                 idx2 += 6;
                 final int idx3 = line.indexOf('"', idx2);
                 final int ilat = (int) ((Double.parseDouble(line.substring(idx2, idx3)) + 90.) * 1000000. + 0.5);
-                track.nodes.add(OsmPathElement.create(ilon, ilat, (short) 0, null, false));
+                track.nodes.add(OsmPathElement.create(ilon, ilat, (short) 0, null));
             }
         }
         br.close();

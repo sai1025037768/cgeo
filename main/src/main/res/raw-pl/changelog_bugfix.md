@@ -1,4 +1,42 @@
 ##
+- Poprawka: Sprawdzanie długości dziennika liczyło niektóre znaki podwójnie
+- Poprawka: Dostosowanie do zmian na stronie hylly
+- Nowość: Dodatkowe opcje motywu dla map Google
+- Poprawka: Kompas ukryty za widokiem odległości (Google Maps v2)
+- Nowość: Ulepszenie logowania w przypadku błędów logowania GC
+- Fix: Editing cache logs does not take care of existing favorite points
+- Fix: "Save offline" not working after failing to edit a found log
+- New: Option to limit search radius for address search
+- New: Show notification for missing location permission
+
+##
+- Poprawka: Skrytki nie wczytują się po włączeniu mapy na żywo (UnifiedMap)
+- Poprawka: Brakuje opcji „Użyj bieżącej listy” przy tworzeniu skrytki zdefiniowanej przez użytkownika (UnifiedMap)
+- Poprawka: Kompas ukryty za widokiem odległości (UnifiedMap)
+- Poprawka: Szczegóły skrytki przewijały się do nagłówka strony po edycji notatki osobistej
+- Nowość: Pokaż datę wydarzenia przy wyborze skrytki
+- Poprawka: Logowanie do platformy OC było nie rozpoznawane przez kreator instalacji
+- Poprawka: Prowadzenie nie działało domyślnie po świeżej instalacji
+- Poprawka: Pasek narzędzi z arkuszem informacji był ukryty w trybie poziomym nawet na dużych urządzeniach
+- Poprawka: Opcja „Podążaj za moją lokalizacją” była nadal aktywna po powiększeniu (UnifiedMap)
+- Poprawka: Indywidualne trasy eksportowane jako ślady nie mogą być odczytane przez urządzenia Garmin
+- Poprawka: Wczytywanie przedmiotów podróżnych z wewnętrznej bazy danych nie udawało się pod pewnymi warunkami
+- Poprawka: Trasa do celu nawigacji nie była ponownie obliczana przy zmianie trybu prowadzenia
+- Poprawka: Błąd podczas odczytywania dostępnych typów logów przedmiotów podróżnych
+
+##
+- Poprawka: Linki śledzące z parametrem TB nie działały
+- Nowość: Dodano wskazówkę do wyłączonego wyszukiwania słów kluczowych dla podstawowych użytkowników
+- Poprawka: Logowanie przedmiotów podróżnych znowu nie działało ponownie (zmiany na stronie internetowej)
+- Poprawka: Informacja o wysokości obraca się wraz ze znacznikiem pozycji
+- Poprawka: Nazwa użytkownika nie była wykrywana podczas logowania, gdy zawierała niektóre znaki specjalne
+
+##
+- Poprawka: Opcja Pokaż/ukryj punkty nawigacji nie działała poprawnie, jeśli przekroczona limity punktów (UnifiedMap)
+- Poprawka: Logowanie skrytek lub przedmiotów podróżnych nie działało (zmiany na stronie internetowej)
+- Poprawka: Usuwanie własnych logów nie działało
+
+##
 - Poprawka: Nie wykrywano licznika znalezień w niektórych sytuacjach z powodu zmian w witrynie
 - Poprawka: Błąd podczas otwierania mapy z pustymi nazwami plików śladu
 - Poprawka: Automatyczne obracanie mapy jest nadal aktywne po zresetowaniu przy użyciu róży kompasu (UnifiedMap)

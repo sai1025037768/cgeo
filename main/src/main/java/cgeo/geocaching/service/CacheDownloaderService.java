@@ -7,6 +7,7 @@ import cgeo.geocaching.list.StoredList;
 import cgeo.geocaching.models.Geocache;
 import cgeo.geocaching.settings.Settings;
 import cgeo.geocaching.storage.DataStore;
+import cgeo.geocaching.ui.ViewUtils;
 import cgeo.geocaching.ui.dialog.Dialogs;
 import cgeo.geocaching.ui.notifications.NotificationChannels;
 import cgeo.geocaching.ui.notifications.Notifications;
@@ -20,7 +21,6 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
@@ -98,6 +98,15 @@ public class CacheDownloaderService extends AbstractForegroundIntentService {
 
     }
 
+    public static void storeCache(final Activity context, final Geocache cache, final boolean fastStoreOnLastSelection, @Nullable final Runnable onStartCallback) {
+        if (Settings.getChooseList() || cache.isOffline()) {
+            // let user select list to store cache in
+            new StoredList.UserInterface(context).promptForMultiListSelection(R.string.lists_title, selectedListIds -> downloadCachesInternal(context, Collections.singleton(cache.getGeocode()), selectedListIds, false, true, onStartCallback), true, cache.getLists(), fastStoreOnLastSelection);
+        } else {
+            downloadCachesInternal(context, Collections.singleton(cache.getGeocode()), Collections.singleton(StoredList.STANDARD_LIST_ID), false, true, onStartCallback);
+        }
+    }
+
     public static void refreshCache(final Activity context, final String geocode, final boolean isOffline, @Nullable final Runnable onStartCallback) {
         askForListsIfNecessaryAndDownload(context, Collections.singleton(geocode), isOffline, true, isOffline, onStartCallback);
     }
@@ -137,7 +146,7 @@ public class CacheDownloaderService extends AbstractForegroundIntentService {
         final Intent intent = new Intent(context, CacheDownloaderService.class);
         intent.putStringArrayListExtra(EXTRA_GEOCODES, newGeocodes);
         ContextCompat.startForegroundService(context, intent);
-        Toast.makeText(context, R.string.download_started, Toast.LENGTH_LONG).show();
+        ViewUtils.showToast(context, R.string.download_started);
 
         if (onStartCallback != null) {
             onStartCallback.run();

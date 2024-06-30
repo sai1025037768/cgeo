@@ -56,6 +56,7 @@
 
     <!-- category nearby search -->
     <string translatable="false" name="pref_nearbySearchLimit">nearbySearchLimit</string>
+    <string translatable="false" name="pref_coordSearchLimit">coordSearchLimit</string>
 
     <!-- settings for geocaching.com service screen -->
     <string translatable="false" name="preference_screen_gc">preference_screen_gc</string>
@@ -215,6 +216,7 @@
     <string translatable="false" name="pref_fakekey_info_offline_mapthemes">fakekey_info_offline_mapthemes</string>
     <string translatable="false" name="pref_persistablefolder_offlinemapthemes">persistablefolder_offlinemapthemes</string>
     <string translatable="false" name="pref_renderthemefolder_synctolocal">renderthemefolder_synctolocal</string>
+    <string translatable="false" name="pref_buildingLayer3D">buildingLayer3D</string>
 
     <!-- category offline maps hillshading -->
     <string translatable="false" name="pref_fakekey_info_offline_maphillshading">fakekey_info_offline_maphillshading</string>
@@ -228,6 +230,7 @@
     <string translatable="false" name="pref_tileprovider_hidden">tileprovider_hidden</string>
     <string translatable="false" name="pref_useUnifiedMap">featureSwitch_useUnifiedMap</string>
     <string translatable="false" name="pref_useDelayedMapFragment">feature_delayedMapFragment</string>
+    <string translatable="false" name="pref_userDefinedTileProviderUri">userDefinedTileProviderUri</string>
 
     <!-- category other -->
     <string translatable="false" name="pref_map_osm_multithreaded">map_osm_multithreaded</string>
@@ -524,6 +527,8 @@
     <string translatable="false" name="pref_feature_unified_geoitem_layer">feature_unified_geoitem_layer</string>
     <string translatable="false" name="pref_feature_wherigo">feature_wherigo</string>
     <string translatable="false" name="pref_feature_wherigo_debug">feature_wherigo_debug</string>
+    <string translatable="false" name="pref_vtm_single_marker_symbol">vtmSingleMarkerSymbol</string>
+    <string translatable="false" name="pref_vtm_marker_atlas_usage">vtmMarkerAtlasUsage</string>
 
 
 
@@ -549,6 +554,7 @@
     <string translatable="false" name="pref_map_routing">map_routing</string>
     <string translatable="false" name="pref_theme_menu">theme_menu</string>
     <string translatable="false" name="pref_google_map_theme">google_map_theme</string>
+    <string translatable="false" name="pref_google_map_option_enabled">google_map_option_enabled</string>
     <string translatable="false" name="pref_mapCacheScaling">mapCacheScaling</string>
     <string translatable="false" name="pref_mapWpScaling">mapWpScaling</string>
     <string translatable="false" name="pref_mapScaleOnly">mapScaleOnly</string>

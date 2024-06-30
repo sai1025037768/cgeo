@@ -1,4 +1,42 @@
 ##
+- Fix: Log length check counting some characters twice
+- Fix: Adapt to hylly website change
+- New: Additional theming options for Google Maps
+- Fix: Compass rose hidden behind distance views (Google Maps v2)
+- New: Enhance logging in case of GC login errors
+- Fix: Editing cache logs does not take care of existing favorite points
+- Fix: "Save offline" not working after failing to edit a found log
+- New: Option to limit search radius for address search
+- New: Show notification for missing location permission
+
+##
+- Fix: Caches not loading after enabling live map (UnifiedMap)
+- Fix: Missing 'use current list' option on creating user-defined cache (UnifiedMap)
+- Fix: Compass rose hidden behind distance views (UnifiedMap)
+- Fix: Cache details scroll to page header after editing personal note
+- New: Show event date to cache selector
+- Fix: Login to OC platform not recognized by installation wizard
+- Fix: Routing not working by default after fresh installation
+- Fix: Info sheet toolbar hidden in landscape mode even on large devices
+- Fix: "follow my location" still active after zoom with pan (UnifiedMap)
+- Fix: Individual routes exported as track cannot be read by Garmin devices
+- Fix: Loading trackables from internal database fails under certain conditions
+- Fix: Route to navigation target not recalculated on routing mode change
+- Fix: Error while reading available trackable log types
+
+##
+- Fix: Trackable links with TB parameter not working
+- New: Add hint to disabled keyword search for basic members
+- Fix: Trackable logging not working again (website changes)
+- Fix: Elevation info is rotating with position marker
+- Fix: Username not detected during login when containing certain special characters
+
+##
+- Fix: Show/hide waypoints not working correctly if crossing waypoint limits (UnifiedMap)
+- Fix: Logging caches or trackables no longer working (website changes)
+- Fix: Deleting own logs not working
+
+##
 - Fix: Found counter not detected in certain situations due to website changes
 - Fix: Crash on opening map with empty track file names
 - Fix: Map auto rotation still active after reset using compass rose (UnifiedMap)

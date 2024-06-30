@@ -87,7 +87,6 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 import android.widget.ViewSwitcher.ViewFactory;
 
 import androidx.annotation.NonNull;
@@ -790,7 +789,7 @@ public class CGeoMap extends AbstractMap implements ViewFactory, OnCacheTapListe
             if (mapOptions.isLiveEnabled) {
                 mapOptions.isStoredEnabled = true;
                 mapOptions.filterContext = new GeocacheFilterContext(GeocacheFilterContext.FilterType.LIVE);
-                refreshMapData(false);
+                refreshMapData(false, true);
             }
             markersInvalidated = true;
             lastSearchResult = null;
@@ -847,7 +846,7 @@ public class CGeoMap extends AbstractMap implements ViewFactory, OnCacheTapListe
     }
 
     @Override
-    public void refreshMapData(final boolean circlesSwitched) {
+    public void refreshMapData(final boolean circlesSwitched, final boolean filterChanged) {
         markersInvalidated = true;
         if (overlayPositionAndScale != null) {
             overlayPositionAndScale.repaintRequired();
@@ -856,15 +855,16 @@ public class CGeoMap extends AbstractMap implements ViewFactory, OnCacheTapListe
             mapView.setCircles(Settings.isShowCircles());
             mapView.repaintRequired(null);
         }
-        MapUtils.updateFilterBar(activity, mapOptions.filterContext);
-
+        if (filterChanged) {
+            MapUtils.updateFilterBar(activity, mapOptions.filterContext);
+        }
     }
 
     private void routingModeChanged(final RoutingMode newValue) {
         Settings.setRoutingMode(newValue);
         final Tracks tracks = mapActivity.getTracks();
         if ((null != individualRoute && individualRoute.getNumSegments() > 0) || null != tracks) {
-            Toast.makeText(activity, R.string.brouter_recalculating, Toast.LENGTH_SHORT).show();
+            ViewUtils.showShortToast(activity, R.string.brouter_recalculating);
         }
         reloadIndividualRoute();
         if (null != tracks) {

@@ -669,6 +669,7 @@
     <string name="cache_filter_status_select_label_has_offline_log">Has Offline Log</string>
     <string name="cache_filter_status_select_label_has_offline_found_log">Has Offline Found Log</string>
     <string name="cache_filter_status_select_label_solved_mystery">Solved Mystery</string>
+    <string name="cache_filter_status_select_label_corrected_coordinates">Corrected Coordinates</string>
     <string name="cache_filter_status_select_label_has_user_defined_waypoints">Has User Defined Waypoints</string>
     <string name="cache_filter_status_select_infotext_solved_mystery">This filter setting will only affect mystery caches. If you like to exclude other cache types, please define an appropriate cache type filter.\n\nA mystery is considered \'solved\' if it has either changed coordinates or a valid final waypoint filled with coordinates.</string>
 
@@ -889,6 +890,8 @@
     <string name="settings_title_map_style">Map style</string>
     <string name="settings_hide_tileproviders_title">Hide Map Sources</string>
     <string name="settings_hide_tileproviders_summary">Exclude one or more map sources from map source selection</string>
+    <string name="settings_userDefinedTileProvider">User-defined tile provider</string>
+    <string name="settings_userDefinedTileProviderUri">Enter full Uri (without trailing slash) to tile provider. Make sure you have checked and comply to their usage conditions.</string>
     <string name="settings_title_data_dir">Geocache data folder</string>
     <string name="settings_title_data_dir_usage">Geocache data folder (%1$s used)</string>
     <string name="calculate_dataDir_title">Geocache data usage</string>
@@ -905,9 +908,11 @@
     <string name="settings_title_navigation_menu">Navigation Menu</string>
 
     <string name="settings_category_geocaching_platform">Geocaching Platform</string>
-    <string name="settings_category_nearbysearch">Nearby search</string>
+    <string name="settings_category_locationcentersearch">Location-centered searches</string>
     <string name="init_nearbysearchlimit_title">Nearby search limit</string>
     <string name="init_nearbysearchlimit_description">Limits the distance up to which caches are returned for with nearby search (0=unlimited)</string>
+    <string name="init_coordsearchlimit_title">Coordinate/Address search limit</string>
+    <string name="init_coordsearchlimit_description">Limits the distance up to which caches are returned for with coordinate/address search (0=unlimited)</string>
     <string name="init_settings_description_unlimited">unlimited</string>
 
     <string name="settings_category_geocaching_additionals">Further services and addon</string>
@@ -1564,8 +1569,6 @@
     <string name="cache_dialog_offline_save_message">Saving cache for offline use…</string>
     <string name="cache_dialog_offline_drop_title">Offline</string>
     <string name="cache_dialog_offline_drop_message">Removing cache from device memory…</string>
-    <string name="cache_dialog_refresh_title">Refresh</string>
-    <string name="cache_dialog_refresh_message">Reloading cache details…</string>
     <string name="cache_menu_speechDeactivate">Stop talking</string>
     <string name="cache_menu_speechActivate">Start talking</string>
     <string name="cache_menu_navigate">Navigate</string>
@@ -1589,7 +1592,6 @@
     <string name="no_browser_found">No browser found</string>
     <string name="cache_menu_open_with">Open with…</string>
     <string name="cache_menu_visit">Log Visit</string>
-    <string name="cache_log_too_long">c:geo couldn\'t submit your log cause it is too long. But thanks for trying to write such an extensive log ;-)</string>
     <string name="cache_empty_log">c:geo couldn\'t submit your log cause it is empty.</string>
     <string name="cache_menu_visit_offline">Quick offline log</string>
     <string name="cache_menu_spoilers">Spoiler images</string>
@@ -1604,6 +1606,7 @@
     <string name="cache_menu_reset_foundstate">Reset found state</string>
     <string name="cache_foundstate_updated">Found state updated</string>
     <string name="cache_menu_set_cache_icon">Set cache icon</string>
+    <string name="cache_menu_change_description_style">Change description style</string>
     <string name="cache_icon_updated">Cache icon updated</string>
     <string name="cache_menu_details">Details</string>
     <string name="cache_menu_refresh">Refresh</string>
@@ -1709,7 +1712,6 @@
     <string name="context_map_remove_from_route_start">Remove from start</string>
     <string name="context_map_remove_from_route_pos">Remove from position %d</string>
     <string name="context_map_remove_from_route_end">Remove from end</string>
-    <string name="context_map_show_coords">Show coordinates</string>
     <string name="context_map_star_show">Show lines to waypoints</string>
     <string name="context_map_star_hide">Hide lines to waypoints</string>
     <string name="edit">Edit</string>
@@ -1733,6 +1735,11 @@
     <string name="goto_targets_list">User-defined caches</string>
     <string name="clear_goto_history_title">Clear goto history</string>
     <string name="clear_goto_history">This will delete all historical waypoints except the five most recent</string>
+
+    <!-- html styles -->
+    <string name="html_style_default">Default</string>
+    <string name="html_style_monochrome">Monochrome</string>
+    <string name="html_style_source">HTML Source</string>
 
     <!-- coordinate calculator hints -->
     <string name="cc_hint_degrees">degrees</string>
@@ -1964,6 +1971,18 @@
     <string name="google_maps_style_retro">Retro</string>
     <string name="google_maps_style_contrast">High Contrast</string>
     <string name="google_maps_style_auto">Device theme (Day/Night)</string>
+    <string name="google_maps_style_details">Details</string>
+    <string name="google_maps_option_group_map">Map Options</string>
+    <string name="google_maps_option_show_traffic">Show Traffic</string>
+    <string name="google_maps_option_show_buildings">Show 3D buildings</string>
+    <string name="google_maps_option_group_theme">Theme Options</string>
+    <string name="google_maps_option_show_feature_theme">Show Theme features</string>
+    <string name="google_maps_option_show_feature_administrative_all">Show Administrative</string>
+    <string name="google_maps_option_show_feature_landscape_all">Show Landscape</string>
+    <string name="google_maps_option_show_feature_poi_all">Show Points of Interest</string>
+    <string name="google_maps_option_show_feature_road_all">Show Roads</string>
+    <string name="google_maps_option_show_feature_transit_all">Show Transit</string>
+    <string name="google_maps_option_show_feature_water_all">Show Water</string>
 
     <!-- search -->
     <string name="geo_search_label">Search caches nearby</string>
@@ -1979,6 +1998,7 @@
     <string name="search_kw">Keyword</string>
     <string name="search_kw_prefill">Keyword</string>
     <string name="search_kw_button">Search by keyword</string>
+    <string name="search_kw_disabled_hint">Disabled as it is not supported by geocaching.com for BASIC members</string>
     <string name="search_hbu">Hidden by</string>
     <string name="search_hbu_prefill">Owner</string>
     <string name="search_hbu_button">Search by owner name</string>
@@ -2536,12 +2556,12 @@
         <item quantity="other">Recommend this cache (%d remaining)</item>
     </plurals>
     <plurals name="fav_points_remaining">
-        <item quantity="zero">Add this cache to favorites (%d remaining)</item>
-        <item quantity="one">Add this cache to favorites (%d remaining)</item>
-        <item quantity="two">Add this cache to favorites (%d remaining)</item>
-        <item quantity="few">Add this cache to favorites (%d remaining)</item>
-        <item quantity="many">Add this cache to favorites (%d remaining)</item>
-        <item quantity="other">Add this cache to favorites (%d remaining)</item>
+        <item quantity="zero">Make this cache a favorite (%d remaining)</item>
+        <item quantity="one">Make this cache a favorite (%d remaining)</item>
+        <item quantity="two">Make this cache a favorite (%d remaining)</item>
+        <item quantity="few">Make this cache a favorite (%d remaining)</item>
+        <item quantity="many">Make this cache a favorite (%d remaining)</item>
+        <item quantity="other">Make this cache a favorite (%d remaining)</item>
     </plurals>
     <string name="command_set_cache_icons_progress">Setting cache icons</string>
     <plurals name="command_set_cache_icons_result">
@@ -2800,6 +2820,7 @@
     <string name="maptheme_scale_text_summary">Additionally scales text labels in map; 100% = no extra scaling</string>
     <string name="maptheme_scale_symbol_title">Symbol Scale factor</string>
     <string name="maptheme_scale_symbol_summary">Additionally scales symbol sizes in map; 100% = no extra scaling</string>
+    <string name="maptheme_show3Dbuildings">Show buildings in 3D</string>
     <string name="vtm_theme_variant">Theme Variant</string>
 
     <!-- history track -->

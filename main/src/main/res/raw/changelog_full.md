@@ -7,6 +7,42 @@ This changelog contains all changes which are not intermediate developing steps.
 
 <!-- --------------------------------------------------------------------------------- --->
 
+## 2024.06.02 Bugfix Release
+
+- Fix: Caches not loading after enabling live map (UnifiedMap)
+- Fix: Missing 'use current list' option on creating user-defined cache (UnifiedMap)
+- Fix: Compass rose hidden behind distance views (UnifiedMap)
+- Fix: Cache details scroll to page header after editing personal note
+- New: Show event date to cache selector
+- Fix: Login to OC platform not recognized by installation wizard
+- Fix: Routing not working by default after fresh installation
+- Fix: Info sheet toolbar hidden in landscape mode even on large devices
+- Fix: "follow my location" still active after zoom with pan (UnifiedMap)
+- Fix: Individual routes exported as track cannot be read by Garmin devices
+- Fix: Loading trackables from internal database fails under certain conditions
+- Fix: Route to navigation target not recalculated on routing mode change
+- Fix: Error while reading available trackable log types
+
+<!-- --------------------------------------------------------------------------------- --->
+
+## 2024.04.25 Bugfix Release
+
+- Fix: Trackable logging not working again (website changes)
+- Fix: Username not detected during login when containing certain special characters
+- Fix: Elevation info is rotating with position marker
+- Fix: Trackable links with TB parameter not working
+- New: Add hint to disabled keyword search for basic members
+
+<!-- --------------------------------------------------------------------------------- --->
+
+## 2024.04.18 Bugfix Release
+
+- Fix: Logging caches or trackables no longer working (website changes)
+- Fix: Deleting own logs not working
+- Fix: Show/hide waypoints not working correctly if crossing waypoint limits (UnifiedMap)
+ 
+<!-- --------------------------------------------------------------------------------- --->
+
 ## 2024.04.13 Bugfix Release
 
 - Fix: Found counter not detected in certain situations due to website changes

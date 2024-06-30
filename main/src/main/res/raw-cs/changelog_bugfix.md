@@ -1,4 +1,42 @@
 ##
+- Oprava: Kontrola délky logu počítající některé znaky dvakrát
+- Oprava: Přizpůsobení se změně webových stránek hylly
+- Novinka: Další možnosti témat pro Mapy Google
+- Oprava: Kompasová růžice skrytá za zobrazeními vzdáleností (Mapy Google v2)
+- Novinka: Vylepšení logování v případě chyb při přihlašování do GC
+- Fix: Editing cache logs does not take care of existing favorite points
+- Fix: "Save offline" not working after failing to edit a found log
+- New: Option to limit search radius for address search
+- New: Show notification for missing location permission
+
+##
+- Oprava: Nenačítání kešek po zapnutí živé mapy (Sjednocená mapa)
+- Oprava: Chybějící možnost 'použít aktuální seznam' při vytváření uživatelsky definované kešky (Sjednocená mapa)
+- Oprava: Kompasová růžice skrytá za zobrazením vzdáleností (Sjednocená mapa)
+- Oprava: Přesun podrobností o kešce do záhlaví stránky po úpravě osobní poznámky
+- Novinka: Zobrazení data eventu ve výběru kešku
+- Oprava: Průvodce instalací nerozpoznal přihlášení k platformě OC
+- Oprava: Po čerstvé instalaci nefunguje směrování ve výchozím nastavení
+- Oprava: Panel nástrojů informačního listu skrytý v režimu na šířku i na velkých zařízeních
+- Oprava: "sledovat mou polohu" je stále aktivní po přiblížení s posunem (Sjednocená mapa)
+- Oprava: Jednotlivé trasy exportované jako stopy nemohou být načteny zařízeními Garmin
+- Oprava: Načítání trackovatelných položek z interní databáze za určitých podmínek selhává
+- Oprava: Trasa k navigačnímu cíli se nepřepočítává při změně režimu trasování
+- Oprava: Chyba při načítání dostupných typů sledovatelných logů
+
+##
+- Oprava: Nefungují trasovatelné odkazy s parametrem TB
+- Novinka: Přidání nápovědy k zakázanému vyhledávání klíčových slov pro základní členy
+- Oprava: Trasovatelné logování opět nefunguje (změny na webu)
+- Oprava: Informace o nadmořské výšce se otáčejí s poziční značkou
+- Oprava: Uživatelské jméno nebylo rozpoznáno při přihlášení, pokud obsahovalo určité speciální znaky
+
+##
+- Oprava: Zobrazení/skrytí trasových bodů nefunguje správně, pokud se překročí limit trasových bodů (Sjednocená mapa)
+- Oprava: Logování kešek nebo sledovatelných předmětů nefunguje (změny na webu)
+- Oprava: Nefunguje mazání vlastních logů
+
+##
 - Oprava: V některých situacích nebylo zjištěno počítadlo nalezených položek kvůli změnám webových stránek geocaching.com
 - Oprava: Pád při otevření mapy s prázdnými názvy souborů tras
 - Oprava: Automatické otáčení mapy je aktivní i po resetování pomocí kompasové růžice (Sjednocená mapa)

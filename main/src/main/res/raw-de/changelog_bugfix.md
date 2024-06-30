@@ -1,4 +1,42 @@
 ##
+- Korrektur: Längenprüfung bei Logs zählt manche Zeichen doppelt
+- Korrektur: hylly-Karte wird im Downloader nicht angezeigt (Webseitenänderung)
+- New: Additional theming options for Google Maps
+- Fix: Compass rose hidden behind distance views (Google Maps v2)
+- New: Enhance logging in case of GC login errors
+- Fix: Editing cache logs does not take care of existing favorite points
+- Fix: "Save offline" not working after failing to edit a found log
+- New: Option to limit search radius for address search
+- New: Show notification for missing location permission
+
+##
+- Korrektur: Caches werden nach Aktivierung der Live-Karte nicht geladen (UnifiedMap)
+- Korrektur: Option 'Aktuelle Liste verwenden' fehlt beim Erstellen eines benutzerdefinierten Caches (UnifiedMap)
+- Korrektur: Kompassrose durch Distanzansichten verdeckt (UnifiedMap)
+- Korrektur: Cache-Detailseite scrollt nach dem Bearbeiten der persönlichen Notiz an den Seitenanfang
+- Neu: Eventdatum bei Cache-Auswahl anzeigen
+- Korrektur: Die Anmeldung zu einer OC-Plattform wird vom Installationsassistenten nicht erkannt
+- Korrektur: Routing funktioniert standardmäßig nicht nach einer Neuinstallation
+- Korrektur: Toolbar auf Cache-Infoseite im Querformat auch auf großen Geräten verdeckt
+- Korrektur: "Meinem Standort folgen" nach Zoomen mit gleichzeitigem Verschieben weiterhin aktiv (UnifiedMap)
+- Korrektur: Individuelle Routen, die als Track exportiert werden, können von Garmin-Geräten nicht gelesen werden
+- Korrektur: Laden von Trackables aus der internen Datenbank schlägt unter bestimmten Bedingungen fehl
+- Korrektur: Route zum Navigationsziel wird beim Ändern des Routing-Modus nicht neu berechnet
+- Korrektur: Fehler beim Lesen der verfügbaren Logaktionen für Trackables
+
+##
+- Korrektur: Trackable Links mit TB-Parameter funktionieren nicht
+- Neu: Hinweis auf deaktivierte Stichwortsuche für Basismitglieder ergänzt
+- Korrektur: Logging von Trackables funktioniert erneut nicht (Änderungen der Webseite)
+- Korrektur: Höhen-Info dreht sich mit Positionsmarkierung
+- Korrektur: Benutzername wird beim Login nicht erkannt, wenn bestimmte Sonderzeichen enthalten sind
+
+##
+- Korrektur: Wegpunkte ein-/ausblenden funktioniert nicht korrekt, wenn Wegpunktlimit überschritten wird (UnifiedMap)
+- Korrektur: Loggen von Caches oder Trackables funktioniert aufgrund von Webseiten-Änderung nicht mehr
+- Korrektur: Löschen eigener Logs funktioniert nicht
+
+##
 - Korrektur: Fundzähler wird in bestimmten Situationen aufgrund von Webseiten-Änderungen nicht korrekt erkannt
 - Korrektur: Absturz beim Öffnen der Karte mit leeren Track-Dateinamen
 - Korrektur: Automatische Kartendrehung weiter aktiv nach Zurücksetzen über Kompassrose (UnifiedMap)

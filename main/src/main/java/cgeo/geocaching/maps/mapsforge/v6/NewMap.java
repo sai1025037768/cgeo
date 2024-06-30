@@ -109,7 +109,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -467,7 +466,7 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
                 mapOptions.isStoredEnabled = true;
                 mapOptions.filterContext = new GeocacheFilterContext(LIVE);
                 caches.setFilterContext(mapOptions.filterContext);
-                refreshMapData(false);
+                refreshMapData(false, true);
             }
 
             if (mapOptions.mapMode == MapMode.LIVE) {
@@ -530,7 +529,7 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
         return true;
     }
 
-    private void refreshMapData(final boolean circlesSwitched) {
+    private void refreshMapData(final boolean circlesSwitched, final boolean filterChanged) {
         if (circlesSwitched) {
             caches.switchCircles();
         }
@@ -543,13 +542,16 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
         if (null != geoObjectLayer) {
             geoObjectLayer.requestRedraw();
         }
-        MapUtils.updateFilterBar(this, mapOptions.filterContext);
+
+        if (filterChanged) {
+            MapUtils.updateFilterBar(this, mapOptions.filterContext);
+        }
     }
 
     private void routingModeChanged(final RoutingMode newValue) {
         Settings.setRoutingMode(newValue);
         if ((null != individualRoute && individualRoute.getNumSegments() > 0) || null != tracks) {
-            Toast.makeText(this, R.string.brouter_recalculating, Toast.LENGTH_SHORT).show();
+            ViewUtils.showShortToast(this, R.string.brouter_recalculating);
         }
         reloadIndividualRoute();
         if (null != tracks) {
@@ -623,7 +625,7 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
     @Override
     public void refreshWithFilter(final GeocacheFilter filter) {
         mapOptions.filterContext.set(filter);
-        refreshMapData(false);
+        refreshMapData(false, true);
     }
 
     private void changeMapSource(@NonNull final MapSource newSource) {
@@ -1035,7 +1037,7 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
     public void onReceiveTargetUpdate(final TargetInfo targetInfo) {
         if (Settings.isAutotargetIndividualRoute()) {
             Settings.setAutotargetIndividualRoute(false);
-            Toast.makeText(this, R.string.map_disable_autotarget_individual_route, Toast.LENGTH_SHORT).show();
+            ViewUtils.showShortToast(this, R.string.map_disable_autotarget_individual_route);
         }
         setTarget(targetInfo.coords, targetInfo.geocode);
     }
@@ -1526,7 +1528,7 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
                 if (targetInfo != null) {
                     if (Settings.isAutotargetIndividualRoute()) {
                         Settings.setAutotargetIndividualRoute(false);
-                        Toast.makeText(this, R.string.map_disable_autotarget_individual_route, Toast.LENGTH_SHORT).show();
+                        ViewUtils.showShortToast(this, R.string.map_disable_autotarget_individual_route);
                     }
                     setTarget(targetInfo.coords, targetInfo.geocode);
                 }
@@ -1543,7 +1545,7 @@ public class NewMap extends AbstractNavigationBarMapActivity implements Observer
         }
         if (requestCode == GeocacheFilterActivity.REQUEST_SELECT_FILTER && resultCode == Activity.RESULT_OK) {
             mapOptions.filterContext = data.getParcelableExtra(EXTRA_FILTER_CONTEXT);
-            refreshMapData(false);
+            refreshMapData(false, true);
         }
 
         this.routeTrackUtils.onActivityResult(requestCode, resultCode, data);

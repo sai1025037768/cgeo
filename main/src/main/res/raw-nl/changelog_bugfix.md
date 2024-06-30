@@ -1,4 +1,42 @@
 ##
+- Oplossing: Log lengte controle telt sommige tekens twee keer
+- Oplossing: Aanpassen aan hylly's website verandering
+- Nieuw: Aanvullende themaopties voor Google Maps
+- Oplossing: Kompas roos verborgen achter afstandsweergave (Google Maps v2)
+- Nieuw: Aanpassen van inloggen in geval van GC login fouten
+- Fix: Editing cache logs does not take care of existing favorite points
+- Fix: "Save offline" not working after failing to edit a found log
+- New: Option to limit search radius for address search
+- New: Show notification for missing location permission
+
+##
+- Oplossing: Caches laden niet nadat live kaart is ingeschakeld (UnifiedMap)
+- Oplossing: Ontbrekende optie 'gebruik huidige lijst' bij het maken van door de gebruiker gedefinieerde cache (UnifiedMap)
+- Oplossing: Kompas roos verborgen achter afstandsweergave (UnifiedMap)
+- Oplossing: Cache details scrollen naar pagina kop na het bewerken van persoonlijke notitie
+- Nieuw: Toon event datum aan cache kiezer
+- Oplossing: Login op OC platform niet herkend door de installatiewizard
+- Oplossing: Routering werkt standaard niet na verse installatie
+- Oplossing: Infoblad werkbalk verborgen in liggende modus, zelfs op grote apparaten
+- Fix: "volg mijn locatie" nog steeds actief na zoomen met pan (UnifiedMap)
+- Oplossing: Individuele routes geëxporteerd als track kunnen niet worden gelezen door Garmin apparaten
+- Oplossing: Het laden van trackables uit interne database mislukt onder bepaalde voorwaarden
+- Oplossing: Route naar navigatie doel niet herberekend bij verandering routering modus
+- Oplossing: Fout tijdens het lezen van beschikbare trackable logtypes
+
+##
+- Oplossing: Trackable links met TB parameter werken niet
+- Nieuw: Voeg hint toe aan uitgeschakelde zoekwoorden voor basis leden
+- Oplossing: Trackable loggen werkt weer niet (website wijzigingen)
+- Fix: Hoogteinfo roteert met positie marker
+- Oplossing: Gebruikersnaam niet gedetecteerd tijdens het inloggen wanneer het bepaalde speciale tekens bevat
+
+##
+- Oplossing: Toon/Verberg waypoints werkt niet meer correct bij overschrijden waypoint limieten (UnifiedMap)
+- Oplossing: Loggen van caches of trackables werkt niet meer (website wijzigingen)
+- Oplossing: Verwijderen van eigen logs werkt niet meer
+
+##
 - Oplossing: Gevonden teller niet gedetecteerd in bepaalde situaties door veranderingen op de website
 - Oplossing: Crash bij het openen van kaart met lege track bestandsnamen
 - Oplossing: Automatische kaartrotatie nog steeds actief na resetten met behulp van kompas (UnifiedMap)
