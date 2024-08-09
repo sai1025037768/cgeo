@@ -10,11 +10,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" android:minSdkVersion="34" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" android:minSdkVersion="34" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.NFC" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
      <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -121,6 +122,10 @@
             <!-- 'adjustNothing' fixes the issue described in #11610 -->
             <!-- don't add configChanges="orientation|screenSize" as we use different base layouts depending on the device orientation -->
         </activity>
+        <activity android:name=".DBInspectionActivity"
+            android:exported="false"
+            android:theme="@style/cgeo"
+            android:launchMode="singleTop" />
         <activity
             android:name=".InstallWizardActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -760,7 +765,7 @@
             android:exported="false"
             android:enabled="true"
             android:process=":brouter_service"
-            android:foregroundServiceType="location">
+            android:foregroundServiceType="dataSync">
         </service>
 
         <activity

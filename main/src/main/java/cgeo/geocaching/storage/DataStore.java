@@ -1,6 +1,7 @@
 package cgeo.geocaching.storage;
 
 import cgeo.geocaching.CgeoApplication;
+import cgeo.geocaching.DBInspectionActivity;
 import cgeo.geocaching.Intents;
 import cgeo.geocaching.R;
 import cgeo.geocaching.SearchResult;
@@ -53,6 +54,7 @@ import cgeo.geocaching.utils.EmojiUtils;
 import cgeo.geocaching.utils.EnumValueMapper;
 import cgeo.geocaching.utils.FileNameCreator;
 import cgeo.geocaching.utils.FileUtils;
+import cgeo.geocaching.utils.GeoHeightUtils;
 import cgeo.geocaching.utils.ImageUtils;
 import cgeo.geocaching.utils.LifecycleAwareBroadcastReceiver;
 import cgeo.geocaching.utils.Log;
@@ -2619,7 +2621,7 @@ public class DataStore {
                 final SQLiteStatement insertTrailpoint = PreparedStatement.INSERT_TRAILPOINT.getStatement();
                 insertTrailpoint.bindDouble(1, location.getLatitude());
                 insertTrailpoint.bindDouble(2, location.getLongitude());
-                insertTrailpoint.bindDouble(3, location.getAltitude());
+                insertTrailpoint.bindDouble(3, GeoHeightUtils.getAltitude(location));
                 insertTrailpoint.bindLong(4, System.currentTimeMillis());
                 insertTrailpoint.executeInsert();
                 database.setTransactionSuccessful();
@@ -5940,6 +5942,34 @@ public class DataStore {
                 return this;
             }
         }
+    }
+
+    /**
+     * Solely to be used by {@link DBInspectionActivity}!
+     * make sure to release the lock by using {@link #releaseDatabase}
+     */
+    public static SQLiteDatabase getDatabase(final boolean writable) {
+        if (writable) {
+            databaseLock.writeLock().lock();
+            Log.d("lock db in writable mode");
+        } else {
+            databaseLock.readLock().lock();
+            Log.d("lock db in readable mode");
+        }
+        return database;
+    }
+
+    /**
+     * Solely to be used by {@link DBInspectionActivity}!
+     * Release a lock acquired by using {@link #getDatabase}
+     */
+    public static void releaseDatabase(final boolean writable) {
+        if (writable) {
+            databaseLock.writeLock().unlock();
+        } else {
+            databaseLock.readLock().unlock();
+        }
+        Log.d("unlock db");
     }
 
 }

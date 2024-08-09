@@ -71,6 +71,7 @@ import cgeo.geocaching.utils.HideActionBarUtils;
 import cgeo.geocaching.utils.HistoryTrackUtils;
 import cgeo.geocaching.utils.LifecycleAwareBroadcastReceiver;
 import cgeo.geocaching.utils.Log;
+import cgeo.geocaching.utils.MapMarkerUtils;
 import cgeo.geocaching.utils.functions.Func1;
 import cgeo.geocaching.wherigo.WherigoDialogManager;
 import cgeo.geocaching.wherigo.WherigoGame;
@@ -150,8 +151,6 @@ public class UnifiedMapActivity extends AbstractNavigationBarMapActivity impleme
     private RouteTrackUtils routeTrackUtils = null;
     private ElevationChart elevationChartUtils = null;
     private String lastElevationChartRoute = null; // null=none, empty=individual route, other=track
-    private boolean waypointsFilteredDueToLimit = false;
-    private int lastCacheCount = -1;
 
     private UnifiedMapType mapType = null;
     private MapMode compatibilityMapMode = MapMode.LIVE;
@@ -329,6 +328,7 @@ public class UnifiedMapActivity extends AbstractNavigationBarMapActivity impleme
         }
         tileProvider = newSource;
         mapFragment = tileProvider.createMapFragment();
+        Settings.setTileProvider(newSource); // store new tileProvider, so that next getRenderTheme retrieves correct tileProvider-specific theme
 
         if (oldFragment != null) {
             mapFragment.init(oldFragment.getCurrentZoom(), oldFragment.getCenter(), () -> onMapReadyTasks(newSource, true, mapState));
@@ -375,7 +375,6 @@ public class UnifiedMapActivity extends AbstractNavigationBarMapActivity impleme
     }
 
     private void reloadCachesAndWaypoints(final boolean setDefaultCenterAndZoom) {
-        waypointsFilteredDueToLimit = false;
         switch (mapType.type) {
             case UMTT_PlainMap:
                 // restore last saved position and zoom
@@ -531,7 +530,6 @@ public class UnifiedMapActivity extends AbstractNavigationBarMapActivity impleme
                 wps.addAll(waypoints);
             });
         } else {
-            waypointsFilteredDueToLimit = true;
             viewModel.waypoints.notifyDataChanged();
         }
     }
@@ -1066,9 +1064,11 @@ public class UnifiedMapActivity extends AbstractNavigationBarMapActivity impleme
             if (routeItem.getType() == RouteItem.RouteItemType.GEOCACHE) {
                 viewModel.sheetInfo.setValue(new UnifiedMapViewModel.SheetInfo(routeItem.getGeocode(), 0));
                 sheetShowDetails(viewModel.sheetInfo.getValue());
+                MapMarkerUtils.addHighlighting(routeItem.getGeocache(), getResources(), nonClickableItemsLayer);
             } else if (routeItem.getType() == RouteItem.RouteItemType.WAYPOINT && routeItem.getWaypointId() != 0) {
                 viewModel.sheetInfo.setValue(new UnifiedMapViewModel.SheetInfo(routeItem.getGeocode(), routeItem.getWaypointId()));
                 sheetShowDetails(viewModel.sheetInfo.getValue());
+                MapMarkerUtils.addHighlighting(routeItem.getWaypoint(), getResources(), nonClickableItemsLayer);
             }
         } else if (item.getRoute() != null) {
             // elevation charts for individual route and/or routes/tracks
@@ -1106,6 +1106,7 @@ public class UnifiedMapActivity extends AbstractNavigationBarMapActivity impleme
 
     @Override
     protected void clearSheetInfo() {
+        MapMarkerUtils.removeHighlighting(nonClickableItemsLayer);
         viewModel.sheetInfo.setValue(null);
     }
 

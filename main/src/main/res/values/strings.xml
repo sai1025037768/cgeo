@@ -202,6 +202,9 @@
     <string name="log_oc_team_comment">OC Team comment</string>
     <string name="log_your_saved_log">Your saved log</string>
     <string name="log_empty_logbook">The logbook of this cache is empty.</string>
+    <string name="log_image_selectfromstorage_tooltip">Select images from storage</string>
+    <string name="log_image_camera_tooltip">Take picture with camera</string>
+    <string name="log_image_selectfromown_tooltip">Select images from own images</string>
 
     <string name="log_problem_none">No Problem</string>
     <string name="log_problem_needs_maintenance_label">Needs Maintenance</string>
@@ -1456,6 +1459,7 @@
 
     <string name="cache_offline_refresh">Refresh</string>
     <string name="cache_offline_drop">Remove from list</string>
+    <string name="cache_offline_delete">Delete</string>
     <string name="cache_delete_userdefined_waypoints">Remove user-defined waypoints</string>
     <string name="cache_delete_userdefined_waypoints_confirm">Remove all user-defined waypoints of this cache?\n\nWaypoints will be deleted immediately, there is no undo.</string>
     <string name="cache_delete_userdefined_waypoints_note">Note: You have \"waypoints from note\" enabled. If you have coordinates in your personal note recognized by c:geo, waypoints will be recreated for them automatically. You can disable this in the personal note edit dialog.</string>
@@ -1958,6 +1962,8 @@
     <string name="map_autorotation_disable">Disable map auto rotation?\n\nYou can enable it again using the Map rotation menu</string>
     <string name="quick_settings">Quick settings</string>
     <string name="quick_settings_info">Some map settings (Map settings, hide, routing) have been moved to the new \"Quick settings\" popup.\nYou can open this popup using the icon in the map\'s bottom center.</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
     <string name="other_settings">Other settings</string>
     <string name="map_show_caches_title">Show Caches:</string>
     <string name="map_show_waypoints_title">Show waypoints:</string>
@@ -1972,7 +1978,6 @@
     <string name="google_maps_style_retro">Retro</string>
     <string name="google_maps_style_contrast">High Contrast</string>
     <string name="google_maps_style_auto">Device theme (Day/Night)</string>
-    <string name="google_maps_style_details">Details</string>
     <string name="google_maps_option_group_map">Map Options</string>
     <string name="google_maps_option_show_traffic">Show Traffic</string>
     <string name="google_maps_option_show_buildings">Show 3D buildings</string>
@@ -2596,6 +2601,7 @@
     <string name="list_confirm_debug_message">The debug mode causes instabilities! Do you want to deactivate the debug mode?</string>
 
     <!-- permission handling -->
+    <string name="permission_missing">Missing permission</string>
     <string name="permission_ask_again">Ask me again</string>
     <string name="permission_goto_app_details">Open Application Info</string>
 
@@ -2771,6 +2777,7 @@
     <string name="downloadmap_keep_temporary_files_summary">Some download sources support additional files not used by c:geo. Keep those extra files in system\'s download folder instead of deleting it</string>
     <string name="downloadmanager_not_available">File cannot be downloaded, system download manager not available</string>
     <string name="download_started">Downloading started in background</string>
+    <string name="download_enqueing_error">Error on trying to start download</string>
     <string name="download_none_selected">No files selected for download</string>
     <string name="downloadmap_target_not_writable">The selected target \"%s\" is not writable - the downloaded map file is saved in the system download folder and must be moved manually to the map folder.</string>
     <string name="downloadmap_allow_metered_network">Allow download over metered network (e.g.: mobile connection)</string>
@@ -2887,6 +2894,8 @@
     <string name="redo">Redo</string>
     <string name="ok" tools:ignore="ButtonCase">Ok</string>
     <string name="optimize">Optimize</string>
+    <string name="expand">Expand</string>
+    <string name="close">Close</string>
 
     <!-- Multi-Selections -->
     <string name="multiselect_selectall">Select All</string>
@@ -3290,4 +3299,17 @@
         <item quantity="many">%d unread messages in message center</item>
         <item quantity="other">%d unread messages in message center</item>
     </plurals>
+
+    <!-- db inspection -->
+    <string name="view_database">View database</string>
+    <string name="dbi_select_title">(Select table)</string>
+    <string name="dbi_columnproperties_title">Column properties</string>
+    <string name="dbi_columnproperties_message">Field: %1$s\nType: %2$s\nStorage: %3$s</string>
+    <string name="dbi_edit_title">Edit "%1$s" of row %2$d"</string>
+    <string name="dbi_edit_ok">Field updated</string>
+    <string name="dbi_edit_error">Error while updating field</string>
+    <string name="dbi_edit_error_pkfield">"%s" is part of primary key, cannot be edited"</string>
+    <string name="dbi_search_title">Search for</string>
+
+
 </resources>

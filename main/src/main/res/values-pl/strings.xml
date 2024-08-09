@@ -1312,6 +1312,7 @@
     <string name="last_day_available">dostępne ostatni dzień</string>
     <string name="cache_offline_refresh">Odśwież</string>
     <string name="cache_offline_drop">Usuń z listy</string>
+    <string name="cache_offline_delete">Usuń</string>
     <string name="cache_delete_userdefined_waypoints">Usuń punkty zdefiniowane przez użytkownika</string>
     <string name="cache_delete_userdefined_waypoints_confirm">Czy usunąć wszystkie zdefiniowane punkty użytkownika dla tej skrytki?\n\nPunkty zostaną zostaną natychmiast usunięte, nie można tego cofnąć.</string>
     <string name="cache_delete_userdefined_waypoints_note">Uwaga: Włączono „Punkty nawigacji z notatki”. Jeśli masz współrzędne w notatce rozpoznane przez c:geo, punkty nawigacji zostaną dla nich automatycznie odtworzone. Możesz to wyłączyć w oknie dialogowym edycji notatki osobistej.</string>
@@ -1774,6 +1775,8 @@
     <string name="map_autorotation_disable">Wyłączyć automatyczne obracanie mapy?\n\nMożesz włączyć ją ponownie za pomocą menu Obrót mapy</string>
     <string name="quick_settings">Szybkie ustawienia</string>
     <string name="quick_settings_info">Niektóre ustawienia mapy (ustawienia mapy, ukrywanie, nawigacja) zostały przeniesione do nowego okienka „Szybkie ustawienia”.\nMożesz otworzyć to okienko używając ikony w dolnym środku mapy.</string>
+    <string name="zoom_in">Powiększ</string>
+    <string name="zoom_out">Pomniejsz</string>
     <string name="other_settings">Inne ustawienia</string>
     <string name="map_show_caches_title">Pokaż skrytki:</string>
     <string name="map_show_waypoints_title">Pokaż punkty nawigacji:</string>
@@ -1788,7 +1791,6 @@
     <string name="google_maps_style_retro">Retro</string>
     <string name="google_maps_style_contrast">Wysoki kontrast</string>
     <string name="google_maps_style_auto">Motyw urządzenia (Dzień/Noc)</string>
-    <string name="google_maps_style_details">Szczegóły</string>
     <string name="google_maps_option_group_map">Opcje mapy</string>
     <string name="google_maps_option_show_traffic">Pokaż natężenie ruchu</string>
     <string name="google_maps_option_show_buildings">Pokaż budynki 3D</string>
@@ -2357,6 +2359,7 @@
     <string name="init_confirm_debug">c:geo jest uruchomiony w trybie debugowania!</string>
     <string name="list_confirm_debug_message">Tryb debugowania może powodować niestabilność. Czy chcesz wyłączyć ten tryb?</string>
     <!-- permission handling -->
+    <string name="permission_missing">Brak uprawnień</string>
     <string name="permission_ask_again">Zapytaj mnie ponownie</string>
     <string name="permission_goto_app_details">Otwórz informacje o aplikacji</string>
     <string name="permission_contacts_read_explanation_title">Uprawnienia dostępu do kontaktów</string>
@@ -2513,6 +2516,7 @@
     <string name="downloadmap_keep_temporary_files_summary">Niektóre źródła obsługują dodatkowe pliki nieużywane przez c:geo. Zachowaj te dodatkowe pliki w folderze pobierania systemu zamiast usuwać je</string>
     <string name="downloadmanager_not_available">Nie można pobrać pliku, systemowy menedżer pobierania plików nie jest dostępny</string>
     <string name="download_started">Pobieranie rozpoczęte w tle</string>
+    <string name="download_enqueing_error">Błąd przy próbie rozpoczęcia pobierania</string>
     <string name="download_none_selected">Nie wybrano plików do pobrania</string>
     <string name="downloadmap_target_not_writable">Wybrany cel \"%s\" nie jest zapisywalny - pobrany plik mapy został zapisany w systemowym folderze pobierania i musi być przeniesiony ręcznie do folderu z mapami.</string>
     <string name="downloadmap_allow_metered_network">Zezwalaj na pobieranie przez dowolną sieć (np. połączenie komórkowe)</string>
@@ -2623,6 +2627,8 @@
     <string name="redo">Ponów</string>
     <string name="ok" tools:ignore="ButtonCase">OK</string>
     <string name="optimize">Optymalizuj</string>
+    <string name="expand">Rozszerz</string>
+    <string name="close">Zamknij</string>
     <!-- Multi-Selections -->
     <string name="multiselect_selectall">Zaznacz wszystko</string>
     <string name="multiselect_selectvisible">Zaznacz widoczne</string>
