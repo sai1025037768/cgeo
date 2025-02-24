@@ -4,7 +4,7 @@ import cgeo.geocaching.CgeoApplication;
 import cgeo.geocaching.R;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -75,12 +75,21 @@ public class MenuUtils {
         if (!anyMenuItemVisible) {
             return;
         }
-        final Context context = CgeoApplication.getInstance();
+        final Resources res = CgeoApplication.getInstance().getResources();
+        tintMenuIcons(menu, res.getColor(R.color.colorIconActionBar), res.getColor(R.color.colorIconMenu));
+    }
+
+    @SuppressLint("RestrictedApi")
+    private static void tintMenuIcons(final Menu menu, final int actionBarColor, final int menuColor) {
         for (int i = 0; i < menu.size(); i++) {
             final MenuItemImpl item = (MenuItemImpl) menu.getItem(i);
-            final Drawable icon = item.getIcon();
-            if (icon != null) {
-                icon.setTint(context.getResources().getColor(item.isActionButton() ? R.color.colorIconActionBar : R.color.colorIconMenu));
+            final Drawable drw = item.getIcon();
+            if (null != drw) {
+                drw.mutate().setTint(item.isActionButton() ? actionBarColor :  menuColor);
+                item.setIcon(drw);
+            }
+            if (null != item.getSubMenu()) {
+                tintMenuIcons(item.getSubMenu(), actionBarColor, menuColor);
             }
         }
     }

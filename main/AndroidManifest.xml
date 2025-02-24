@@ -22,7 +22,7 @@
 
     <uses-feature
         android:name="android.hardware.location.gps"
-        android:required="true" />
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -330,6 +330,12 @@
                 <data android:pathPattern=".*\\..*\\..*\\.zip" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.zip" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.zip" />
+
+                <data android:pathPattern=".*\\.gwc" />
+                <data android:pathPattern=".*\\..*\\.gwc" />
+                <data android:pathPattern=".*\\..*\\..*\\.gwc" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.gwc" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.gwc" />
             </intent-filter>
         </activity>
         <activity
@@ -812,19 +818,6 @@
 
         <activity
             android:name=".settings.GCAuthorizationActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="stateHidden"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".settings.ECAuthorizationActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden"

@@ -150,10 +150,10 @@ public class LogCacheActivity extends AbstractLoggingActivity implements LoaderM
         }
         reportProblem.setValues(possibleReportProblemTypes);
 
-        if (logEditMode != LogEditMode.CREATE_NEW && possibleReportProblemTypes.size() == 1) {
-            binding.reportProblemBox.setVisibility(View.GONE);
-        } else {
+        if (logEditMode == LogEditMode.CREATE_NEW && possibleReportProblemTypes.size() > 1) {
             binding.reportProblemBox.setVisibility(View.VISIBLE);
+        } else {
+            binding.reportProblemBox.setVisibility(View.GONE);
         }
     }
 
@@ -576,7 +576,7 @@ public class LogCacheActivity extends AbstractLoggingActivity implements LoaderM
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
         super.onCreateOptionsMenu(menu);
-        menu.findItem(R.id.save).setVisible(true);
+        menu.findItem(R.id.save).setVisible(logEditMode == LogEditMode.CREATE_NEW);
         menu.findItem(R.id.clear).setVisible(true);
         menu.findItem(R.id.menu_sort_trackables_by).setVisible(true);
         switch (Settings.getTrackableComparator()) {

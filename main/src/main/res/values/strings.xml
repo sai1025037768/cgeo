@@ -947,7 +947,6 @@
     <string name="settings_authorize">Authorize c:geo</string>
     <string name="settings_reauthorize">Update or remove authorization</string>
     <string name="settings_gc_description">Authorize c:geo with geocaching.com to search for caches.</string>
-    <string name="settings_ec_description">Authorize c:geo with extremcaching.com to search for caches and access/filter your found caches.</string>
     <string name="settings_su_description">Authorize c:geo with geocaching.su to search for caches.</string>
     <string name="settings_lc_description">Include Adventure Lab caches on the map.\n\n(Available to \"Geocaching.com\" premium members only. Requires an activated \"Geocaching.com\" service.)\n\nChanging this setting requires a restart.</string>
     <string name="settings_lc_found_state_title">Manual found state</string>
@@ -1219,12 +1218,10 @@
     <string name="init_trackappearance_summary">Select color, opaqueness and line width for track/route line. A track/route consists of several waypoints and can be loaded via a GPX track/route file.</string>
     <string name="init_circlecolor">Circle line color</string>
     <string name="init_circlecolor_summary">Select color and opaqueness for circle line. Circles are used as a visual representation for the minimum radius around a cache or physical waypoint, wherein no other cache or physical waypoint is allowed. (Applies to geocaching.com)</string>
-    <string name="init_circlefillcolor">Circle fill color</string>
-    <string name="init_circlefillcolor_summary">Select color and opaqueness for the circles to be filled with</string>
+    <string name="init_geofencecolor">Geofence circle color</string>
+    <string name="init_geofencecolor_summary">Select color and opaqueness for geofence circle. Circles are used as a visual representation for the geofence defined for waypoints (typically applies to geocaching.com lab adventure stages)</string>
     <string name="init_accuracycirclecolor">Accuracy circle line color</string>
     <string name="init_accuracycirclecolor_summary">Select color and opaqueness for accuracy circle line. Accuracy circle is used as a visual representation for location signal accuracy.</string>
-    <string name="init_accuracycirclefillcolor">Accuracy circle fill color</string>
-    <string name="init_accuracycirclefillcolor_summary">Select color and opaqueness for the accuracy circles to be filled with</string>
     <string name="init_include_found_status">Include \"Found\" status</string>
     <string name="init_trackautovisit">Visit TBs</string>
     <string name="init_summary_trackautovisit">Set trackables to \"Visited\" by default</string>
@@ -1373,6 +1370,8 @@
     <string name="contentstorage_err_list_failed">Files in Folder \'%s\' could not be listed</string>
     <string name="contentstorage_err_folder_access_failed">Folder \'%s\' could not be accessed</string>
     <string name="contentstorage_err_copy_failed">File \'%1$s\' could not be copied/moved to \'%2$s\' (move=%3$s)</string>
+    <string name="contentstorage_err_activity_not_found_title">Error selecting file/folder</string>
+    <string name="contentstorage_err_activity_not_found_message">Your system doesn\'t provide a component to select files/folders: %s</string>
 
     <!-- Persistable Folders and Uris -->
     <string name="persistablefolder_usertype_userdefined">User-defined</string>
@@ -1616,6 +1615,8 @@
     <string name="cache_dialog_offline_drop_message">Removing cache from device memory…</string>
     <string name="cache_menu_speechDeactivate">Stop talking</string>
     <string name="cache_menu_speechActivate">Start talking</string>
+    <string name="talking_disabled">Talking disabled</string>
+    <string name="talking_enabled">Talking enabled</string>
     <string name="cache_menu_navigate">Navigate</string>
     <string name="cache_menu_target">Set as target</string>
     <string name="cache_menu_navigation_drive">Navigation (Driving)</string>
@@ -1851,6 +1852,8 @@
     <string name="waypoint_my_coordinates_accuracy">My coordinates (±%s)</string>
     <string name="waypoint_name">Name</string>
     <string name="waypoint_edit">Edit</string>
+    <string name="waypoint_geofence">Geofence</string>
+    <string name="waypoint_geofence_summary">Set radius for geofence (in meters)</string>
     <string name="waypoint_copy_coordinates">Copy coordinates</string>
     <string name="waypoint_clear_coordinates">Clear coordinates</string>
     <string name="waypoint_delete">Delete</string>
@@ -2156,11 +2159,9 @@
     <string name="helper_sendtocgeo_description">Send to c:geo is a browser extension <strong>for your PC</strong>. When browsing geocaching.com, you can send caches to your smartphone with the click of a button directly inside the browser.</string>
     <string name="helper_locus_description">Outdoor navigation app for your phone or tablet. View topo maps offline, track your route, hunt geocaches, use a voice guide and do even more.</string>
     <string name="helper_gpsstatus_description">You can use the radar in this application in conjunction with c:geo. It also offers a lot of other GPS-related information.</string>
-    <string name="helper_bluetoothgps_description">Allows you to use an external GPS receiver to get more precise location data, and can spare battery of your device.</string>
     <string name="helper_gps_locker_description">GPS Locker keeps GPS signal active when switching between applications and when your device\'s screen is off.</string>
     <string name="helper_google_translate_title">Google Translate</string>
     <string name="helper_google_translate_description">If you download translation packages in the Google Translate app, then you can easily translate cache descriptions in c:geo by a long tap on the cache description text (without an Internet connection).</string>
-    <string name="helper_where_you_go_description">WhereYouGo allows playing and searching geocaches of type Wherigo. c:geo can automatically trigger the download of cartridges within this app.</string>
     <string name="helper_chirpwolf_description">Chirp Wolf allows you to read the data from ANT+/Garmin chirp tags, which is needed for ANT+/chirp geocaches.</string>
     <string name="helper_alc_description">Adventure Lab Player app for your phone or tablet.</string>
     <string name="helper_gcwizard_description">GC Wizard contains numerous tools for simple cryptography, geodetic and scientific calculations as well as hundreds of sets of various symbols.</string>

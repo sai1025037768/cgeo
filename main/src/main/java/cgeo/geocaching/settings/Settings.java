@@ -1318,6 +1318,10 @@ public class Settings {
         return getBoolean(R.string.pref_mapDownloadsKeepTemporaryFiles, false);
     }
 
+    public static boolean getMapDownloaderAutoRename() {
+        return getBoolean(R.string.pref_autorenameDownloads, true);
+    }
+
     public static boolean dbNeedsCleanup() {
         return needsIntervalAction(R.string.pref_dbCleanupLastCheck, 24, () -> setDbCleanupLastCheck(false));
     }
@@ -2370,7 +2374,6 @@ public class Settings {
         final HashSet<String> sensitiveKeys = new HashSet<>();
         Collections.addAll(sensitiveKeys,
                 context.getString(R.string.pref_username), context.getString(R.string.pref_password),
-                context.getString(R.string.pref_ecusername), context.getString(R.string.pref_ecpassword),
                 context.getString(R.string.pref_user_vote), context.getString(R.string.pref_pass_vote),
                 context.getString(R.string.pref_ocde_tokensecret), context.getString(R.string.pref_ocde_tokenpublic), context.getString(R.string.pref_temp_ocde_token_secret), context.getString(R.string.pref_temp_ocde_token_public),
                 context.getString(R.string.pref_ocpl_tokensecret), context.getString(R.string.pref_ocpl_tokenpublic), context.getString(R.string.pref_temp_ocpl_token_secret), context.getString(R.string.pref_temp_ocpl_token_public),

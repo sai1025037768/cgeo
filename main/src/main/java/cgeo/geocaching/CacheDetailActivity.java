@@ -477,6 +477,7 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
             final boolean isOriginalWaypoint = selectedWaypoint.getWaypointType() == WaypointType.ORIGINAL;
             menu.findItem(R.id.menu_waypoint_reset_cache_coords).setVisible(isOriginalWaypoint);
             menu.findItem(R.id.menu_waypoint_edit).setVisible(!isOriginalWaypoint);
+            menu.findItem(R.id.menu_waypoint_geofence).setVisible(selectedWaypoint.canChangeGeofence());
             menu.findItem(R.id.menu_waypoint_duplicate).setVisible(!isOriginalWaypoint);
             menu.findItem(R.id.menu_waypoint_delete).setVisible(!isOriginalWaypoint || selectedWaypoint.belongsToUserDefinedCache());
             final boolean hasCoords = selectedWaypoint.getCoords() != null;
@@ -501,6 +502,27 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
             if (selectedWaypoint != null) {
                 ensureSaved();
                 EditWaypointActivity.startActivityEditWaypoint(this, cache, selectedWaypoint.getId());
+                setNeedsRefresh();
+            }
+        } else if (itemId == R.id.menu_waypoint_geofence) {
+            if (selectedWaypoint != null) {
+                ensureSaved();
+                SimpleDialog.of(this)
+                        .setTitle(TextParam.id(R.string.waypoint_geofence))
+                        .setMessage(TextParam.id(R.string.waypoint_geofence_summary))
+                        .input(
+                                new SimpleDialog.InputOptions().setInitialValue(String.valueOf(selectedWaypoint.getGeofence())).setInputType(InputType.TYPE_CLASS_NUMBER),
+                                result -> {
+                                    float newValue = 0;
+                                    try {
+                                        newValue = Float.parseFloat(result);
+                                    } catch (NumberFormatException ignore) {
+                                        // ignore
+                                    }
+                                    selectedWaypoint.setGeofence(newValue);
+                                    saveAndNotify();
+                                }
+                );
                 refreshOnResume = true;
             }
         } else if (itemId == R.id.menu_waypoint_visited) {
@@ -768,7 +790,6 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
         } else if (menuItem == R.id.menu_export_persnotes) {
             new PersonalNoteExport().export(Collections.singletonList(cache), this);
         } else if (menuItem == R.id.menu_edit_fieldnote) {
-            ensureSaved();
             editPersonalNote(cache, this);
         } else if (menuItem == R.id.menu_navigate) {
             NavigationAppFactory.onMenuItemSelected(item, this, cache);
@@ -780,7 +801,7 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
         } else if (menuItem == R.id.menu_change_description_style) {
             changeDescriptionStyle();
         } else if (LoggingUI.onMenuItemSelected(item, this, cache, null)) {
-            refreshOnResume = true;
+            setNeedsRefresh();
         } else {
             return super.onOptionsItemSelected(item);
         }
@@ -1145,7 +1166,7 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
 
             @Override
             protected void onFinished() {
-                updateCacheLists(CacheDetailActivity.this.findViewById(R.id.offline_lists), cache, res);
+                updateCacheLists(CacheDetailActivity.this.findViewById(R.id.offline_lists), cache, res, null);
             }
         }.execute();
     }
@@ -1298,7 +1319,7 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
                     new StoreCacheClickListener(), null, new MoveCacheClickListener(), new StoreCacheClickListener());
 
             // list
-            updateCacheLists(binding.getRoot(), cache, activity.res);
+            updateCacheLists(binding.getRoot(), cache, activity.res, activity);
 
             // watchlist
 
@@ -1737,11 +1758,9 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
             activity.addShareAction(binding.personalnote);
             TooltipCompat.setTooltipText(binding.editPersonalnote, getString(R.string.cache_personal_note_edit));
             binding.editPersonalnote.setOnClickListener(v -> {
-                activity.ensureSaved();
                 editPersonalNote(cache, activity);
             });
             binding.personalnote.setOnClickListener(v -> {
-                activity.ensureSaved();
                 editPersonalNote(cache, activity);
             });
             TooltipCompat.setTooltipText(binding.storewaypointsPersonalnote, getString(R.string.cache_personal_note_storewaypoints));
@@ -2126,7 +2145,7 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
                     if (sortedWaypoints != null && !sortedWaypoints.isEmpty()) {
                         activity.selectedWaypoint = sortedWaypoints.get(sortedWaypoints.size() - 1); // move to bottom where new waypoint will be created
                     }
-                    activity.refreshOnResume = true;
+                    activity.setNeedsRefresh();
                 });
 
                 headerBinding.addWaypointCurrentlocation.setOnClickListener(v2 -> {
@@ -2274,7 +2293,7 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
                 activity.selectedWaypoint = wpt;
                 activity.ensureSaved();
                 EditWaypointActivity.startActivityEditWaypoint(activity, cache, wpt.getId());
-                activity.refreshOnResume = true;
+                activity.setNeedsRefresh();
             });
 
             rowView.setOnLongClickListener(v -> {
@@ -2633,13 +2652,13 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
         }
     }
 
-    static void updateCacheLists(final View view, final Geocache cache, final Resources res) {
+    static void updateCacheLists(final View view, final Geocache cache, final Resources res, @Nullable final CacheDetailActivity cacheDetailActivity) {
         final SpannableStringBuilder builder = new SpannableStringBuilder();
         for (final Integer listId : cache.getLists()) {
             if (builder.length() > 0) {
                 builder.append(", ");
             }
-            appendClickableList(builder, view, listId);
+            appendClickableList(builder, view, listId, cacheDetailActivity);
         }
         builder.insert(0, res.getString(R.string.list_list_headline) + " ");
         final TextView offlineLists = view.findViewById(R.id.offline_lists);
@@ -2647,13 +2666,16 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
         offlineLists.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
-    static void appendClickableList(final SpannableStringBuilder builder, final View view, final Integer listId) {
+    static void appendClickableList(final SpannableStringBuilder builder, final View view, final Integer listId, @Nullable final CacheDetailActivity cacheDetailActivity) {
         final int start = builder.length();
         builder.append(DataStore.getList(listId).getTitle());
         builder.setSpan(new ClickableSpan() {
             @Override
             public void onClick(@NonNull final View widget) {
                 Settings.setLastDisplayedList(listId);
+                if (cacheDetailActivity != null) {
+                    cacheDetailActivity.setNeedsRefresh();
+                }
                 CacheListActivity.startActivityOffline(view.getContext());
             }
         }, start, builder.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -2726,6 +2748,11 @@ public class CacheDetailActivity extends TabbedViewPagerActivity
         if (cache == null) {
             return;
         }
+        if (cache.getVariables().wasModified()) {
+            // make sure variables state gets updated before saving cache
+            cache.getVariables().saveState();
+        }
+        activity.ensureSaved();
         final FragmentManager fm = activity.getSupportFragmentManager();
         final PersonalNoteCapability connector = ConnectorFactory.getConnectorAs(cache, PersonalNoteCapability.class);
         final EditNoteDialog dialog = EditNoteDialog.newInstance(cache.getPersonalNote(), cache.isPreventWaypointsFromNote(), (connector != null && connector.canAddPersonalNote(cache)));
