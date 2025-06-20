@@ -517,6 +517,7 @@
     <string name="caches_upload_allcoords">Upload coordinates for all caches</string>
     <string name="caches_upload_allcoords_dialogtitle">WARNING - Uploading all coordinates</string>
     <string name="caches_upload_allcoords_warning">This will overwrite the existing coordinates on the server for all (selected) caches of your list with the current listing coordinates in c:geo! This is to be used only in special cases, e. g. when you imported a GPX file which contains corrected coordinates as listing coordinates. This cannot be undone and you should only use it, if you know what you are doing. In normal cases you might rather want to use the function \"Upload modified coordinates\" in the same menu.</string>
+    <string name="caches_share_geocodes">Share list of geocodes</string>
     <string name="caches_refresh_selected">Refresh selected</string>
     <string name="caches_refresh_all">Refresh all</string>
     <string name="caches_move_selected">Move selected</string>
@@ -1116,6 +1117,7 @@
     <string name="init_summary_units">Use Imperial Units instead of Metric Units</string>
     <string name="init_cachelists">Cache Lists</string>
     <string name="init_localization">Localization</string>
+    <string name="init_logs">Logs</string>
     <string name="init_log_offline">Offline Logging</string>
     <string name="init_summary_log_offline">Enable Offline Logging (Won\'t show online log screen when logging, won\'t upload logs)</string>
     <string name="init_choose_list">Ask for List</string>
@@ -1126,6 +1128,8 @@
     <string name="init_summary_cacheListInfo">Select the additional information to be shown for each cache in cache lists</string>
     <string name="init_livelist">Show Direction</string>
     <string name="init_summary_livelist">Show an arrow with compass direction for caches in a list</string>
+    <string name="init_live_compass_in_navigation_action">Show direction in cache detail view</string>
+    <string name="init_summary_live_compass_in_navigation_action">Show an arrow with compass direction for caches in their detail view</string>
     <string name="init_quicklaunchitems">Quick launch buttons</string>
     <string name="init_summary_quicklaunchitems">Select one or more items as quick launch buttons on home screen</string>
     <string name="init_custombnitem">Custom Menu Item</string>
@@ -1133,6 +1137,8 @@
     <string name="init_custombnitem_default">Nearby search (default)</string>
     <string name="init_custombnitem_none">(none)</string>
     <string name="init_custombnitem_empty_placeholder">(empty placeholder)</string>
+    <string name="init_title_collapse_log_limit">Log Line Limit</string>
+    <string name="init_summary_collapse_log_limit">Maximum number of lines to show for logs. Additional lines will be collapsed. </string>
 
     <!-- names for CacheListInfoItem -->
     <string name="cacheListInfoItem_Geocode">Geocode</string>
@@ -1352,6 +1358,8 @@
     <string name="feature_favorite">Adding cache to favorites</string>
     <string name="feature_voting">Voting for caches</string>
     <string name="init_appearance_general">General appearance</string>
+    <string name="init_cachedetail_behaviour">Behaviour</string>
+    <string name="init_cachedetail_note">Personal Cache Note</string>
     <string name="init_maplines_title">Map colors customization</string>
     <string name="init_map_other">Other</string>
     <string name="init_map_osm_multithreaded">Multi-threaded (OSM)</string>
@@ -2114,6 +2122,7 @@
     <string name="search_filter">Filter</string>
     <string name="search_filter_info_message" formatted="false">**Search by filter** searches caches on all active online services (e.g. geocaching.com) using a provided filter. However, search capabilities of these services are usually more limited than filter capabilities of c:geo.\n\n- All services only support AND filters (no OR filters and no filter inversion).\n- The more basic filters like **cache type** or **cache size** are supported by all services. More complicated filters are often not supported or have some restrictions e.g. **favorites** or **hidden date**.\n- A detailed list on supported filters per service can be found [here](https://github.com/cgeo/cgeo/wiki/%22Search-by-Filter%22-support-by-c:geo-Connectors).\n\nFilters not supported by the online service will be applied by c:geo on the received results.</string>
     <string name="search_tb">Trackable</string>
+    <string name="most_recent">Most recent</string>
     <string name="search_destination">Open destination in c:geo</string>
     <string name="add_target_to">Add target to</string>
     <string name="search_address_started">Searching for places</string>
