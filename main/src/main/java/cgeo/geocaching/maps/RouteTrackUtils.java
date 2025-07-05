@@ -110,10 +110,12 @@ public class RouteTrackUtils {
                 Log.d("[RouteTrackDebug] Start import of track " + uri);
                 GPXTrackOrRouteImporter.doImport(activity, uri, UriUtils.getLastPathSegment(uri), (route) -> {
                     Log.d("[RouteTrackDebug] Finished import of track " + uri + ": " + (route == null ? "null returned" : "updating map"));
-                    final String key = tracks.add(activity, uri, updateTrack);
-                    tracks.setRoute(key, route);
-                    updateTrack.updateRoute(key, route, tracks.getColor(key), tracks.getWidth(key));
-                    updateDialogTracks(popup, tracks, null);
+                    if (route != null) {
+                        final String key = tracks.add(activity, uri, updateTrack);
+                        tracks.setRoute(key, route);
+                        updateTrack.updateRoute(key, route, tracks.getColor(key), tracks.getWidth(key));
+                        updateDialogTracks(popup, tracks, null);
+                    }
                 });
             }
         }
@@ -165,7 +167,7 @@ public class RouteTrackUtils {
         configureMenuItem(menu.findItem(R.id.indivroute_export_route), isIndividualRoute, null);
         configureMenuItem(menu.findItem(R.id.indivroute_export_track), isIndividualRoute, null);
         configureMenuItem(menu.findItem(R.id.indivroute_load), isIndividualRoute, null);
-        configureVisibility(menu.findItem(R.id.menu_visibility), route.isHidden());
+        configureVisibility(menu.findItem(R.id.menu_visibility), route != null && route.isHidden());
     }
 
     private static void configureMenuItem(final MenuItem item, final boolean visible, final Boolean hidePerDefault) {
