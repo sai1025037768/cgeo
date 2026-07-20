@@ -595,8 +595,6 @@
     <string name="cache_filter_storage_delete_button">Odstrániť</string>
     <string name="cache_filter_storage_clear_button">Vyčistiť</string>
     <string name="cache_filter_storage_select_title">Vyberte filter</string>
-<<<<<<< HEAD
-=======
     <string name="cache_filter_storage_delete_title">Odstrániť filter</string>
     <string name="cache_filter_storage_delete_message">Naozaj chcete odstrániť túto konfiguráciu filtra?</string>
     <string name="cache_filter_storage_select_clear_title">Vyberte filter alebo vymažte aktuálny filter</string>
@@ -606,7 +604,6 @@
     <string name="cache_filter_storage_save_confirm_title">Uložiť filter a prepísať</string>
     <string name="cache_filter_storage_save_confirm_message">Už existuje filter s názvom \'%s\' a odlišnou konfiguráciou. Chcete ho prepísať?</string>
     <string name="cache_filter_storage_clear_message">Chcete vymazať aktuálny filter?</string>
->>>>>>> release
     <string name="cache_filter_stringfilter_matchcase">Rozlišovať veľkosť</string>
     <string name="cache_filter_stringfilter_searchtext_hint">Vyhľadať text</string>
     <string name="cache_filter_stringfilter_info">Pri možnosti „Vzor“ použite zástupné znaky * a?. * predstavuje nulu, jeden alebo viac znakov, ? predstavuje jeden jediný znak. Napríklad vzor „H?mburg *“ sa bude zhodovať napr. „Homburg“ alebo „Hamburg v noci“, ale nie „deň v Hamburgu“ alebo „Hahmburg“</string>
