@@ -695,9 +695,7 @@
         <item>3d</item>
         <item>&lt;3d</item>
     </string-array>
-<<<<<<< HEAD
     <!-- named filter activity -->
-=======
     <string-array name="cache_filter_event_date_stored_values_label">
         <item>uplynulé</item>
         <item>dnes</item>
@@ -720,7 +718,6 @@
         <item>1m</item>
         <item>&gt;1m</item>
     </string-array>
->>>>>>> release
     <!-- about -->
     <string name="about_version">Verzia</string>
     <string name="about_changelog">Zmeny</string>
@@ -911,12 +908,9 @@
     <string name="init_signature_template_type">Typ</string>
     <string name="init_signature_template_location">Poloha</string>
     <string name="init_signature_template_geocode">Geokód</string>
-<<<<<<< HEAD
-=======
     <string name="init_ratingwanted">GCvote hodnotenie</string>
     <string name="init_summary_ratingwanted">Načítať hodnotenie skrýše z GCvote.com</string>
     <string name="init_summary_bettercacher">Načítať úroveň kešky a kategórie z BetterCacher.org</string>
->>>>>>> release
     <string name="init_friends_and_own_logs_wanted">Logy priateľov a vlastné</string>
     <string name="init_summary_friends_and_own_logs_wanted">Zobraziť ďalšiu stránku pre logy priateľov a vlastné logy</string>
     <string name="init_openlastdetailspage">Detaily na posledne použitej stránke</string>
@@ -1570,8 +1564,6 @@
     <string name="cache_recently_viewed">Nedávno zobrazené</string>
     <string name="cache_recently_viewed_empty">Žiadne nedávno prezerané kešky</string>
     <string name="cache_clear_recently_viewed">vymazať</string>
-<<<<<<< HEAD
-=======
     <string name="cachedetails_progress_refresh">%s obnovené</string>
     <string name="cachedetails_progress_watch">Pridané do zoznamu sledovaných</string>
     <string name="cachedetails_progress_unwatch">Odstránené zo zoznamu sledovaných</string>
@@ -1584,7 +1576,6 @@
     <string name="cache_wherigo_credentials">Ak chcete hrať toto Wherigo pomocou interného prehrávača c:geo, je najprv potrebná autorizácia v službe geocaching.com. Ťuknutím na tlačidlo vpravo prejdete do konfigurácie.</string>
     <string name="cache_whereyougo_start">Otvorte WhereYouGo a stiahnite si a spustite cartridge</string>
     <string name="cache_whereyougo_install">Nainštalujte WhereYouGo a stiahnite si a spustite cartridge</string>
->>>>>>> release
     <string name="cache_chirpwolf_start">Táto keška môže používať buť vysielač chirp alebo iný druh bezdrôtového vysielača. Pre načítanie údajov z chirpu môžete otvoriť Chirp Wolf.</string>
     <string name="cache_chirpwolf_install">Táto keška môže používať buť vysielač chirp alebo iný druh bezdrôtového vysielača. Pre načítanie údajov z chirpu si môžete nainštalovať Chirp Wolf.</string>
     <string name="cache_alc_start">Otvorte aplikáciu Adventure Lab a začnite hrať túto adventúru</string>
@@ -1633,16 +1624,13 @@
     <string name="clear_goto_history">Týmto sa odstránia všetky historické body trasy okrem piatich posledných</string>
     <string name="internal_connector_name">Používateľom definované kešky</string>
     <!-- html styles -->
-<<<<<<< HEAD
     <!-- coordinate input dialog -->
-=======
     <string name="html_style_default">Predvolený</string>
     <string name="html_style_default_no_contrast_fix">Predvolená oprava kontrastu</string>
     <string name="html_style_monochrome">Jednofarebný</string>
     <string name="html_style_source_formatted">HTML zdroj formátovaný</string>
     <string name="html_style_source">Zdrojové HTML</string>
     <!-- coordinate calculator hints -->
->>>>>>> release
     <string name="cc_hint_degrees">stupne</string>
     <string name="cc_hint_minutes">minúty</string>
     <string name="cc_hint_seconds">sekundy</string>
@@ -2747,9 +2735,7 @@
         <item quantity="other">%d neprečítaných správ v centre správ</item>
     </plurals>
     <!-- GC image size conversion -->
-<<<<<<< HEAD
     <!-- db inspection -->
-=======
     <string name="settings_gc_imagesize_title">Preferovaná veľkosť obrázkov</string>
     <string name="settings_gc_imagesize_summary">Obrázky z Geocaching.com v listingoch, logoch a trackovacéch predmetoch sú k dispozícii v rôznych veľkostiach. Vyberte veľkosť, ktorá sa má načítať pri načítavaní a ukladaní kešky.</string>
     <string-array name="settings_gc_imagesize_entries">
@@ -2778,5 +2764,4 @@
     <string name="emoji_category_activity">Aktivita</string>
     <string name="emoji_category_people">Ľudia</string>
     <string name="emoji_category_numbers">Čísla</string>
->>>>>>> release
 </resources>
