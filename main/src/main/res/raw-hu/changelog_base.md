@@ -15,6 +15,7 @@ As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed th
 - "Driving mode" for OpenStreetMap based maps
 - Long-tap on track / individual route for further options
 
+<<<<<<< HEAD
 ### Map
 - New: Route optimization caches calculated data
 - New: Enabling live mode keeps waypoints of currently set target visible
@@ -34,6 +35,27 @@ As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed th
 - Fix: Tile downloader stopping under certain conditions (OpenStreetMap online maps only)
 - New: Conditional cache markers
 - New: Show navigation hint (arrow + distance)
+=======
+### Térkép
+- New: Show geofences for lab stages (UnifiedMap) - enable "Circles" in map quick settings to show them
+- New: Option to set circles with individual radius to waypoints ("geofence" context menu option)
+- Fix: Map view not updated when removing cache from currently shown list
+- Fix: Number of cache in list chooser not updated on changing list contents
+- Change: Keep current viewport on mapping a list, if all caches fit into current viewport
+- New: Follow my location in elevation chart (UnifiedMap)
+- New: Enable "move to" / "copy to" actions for "show as list"
+- New: Support Elevate Winter theme in map downloader
+- New: Adaptive hillshading, optional high quality mode (UnifiedMap Mapsforge)
+- New: Redesigned routes/tracks quick settings dialog
+- New: Long tap on map selection icon to select previous tile provider (UnifiedMap)
+- New: Allow setting display name for offline maps in companion file (UnifiedMap)
+- New: Long tap on "enable live button" to load offline caches
+- New: Offline hillshading for UnifiedMap (VTM variant)
+- New: Support for background maps (UnifiedMap)
+- Fix: Compact icons not returning to large icons on zooming in in auto mode (UnifiedMap)
+- New: Long-tap actions in cache infosheet: GC code, cache title, coordinates, personal note/hint
+- Change: Switches cache infosheet long-tap for emoji selector to short tap to resolve the collision
+>>>>>>> release
 
 ### Cache details
 - New: Detect additional characters in formulas: –, ⋅, ×

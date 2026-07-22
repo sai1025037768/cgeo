@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### General release notes
 
 **Edge to Edge**
@@ -7,6 +8,12 @@ Due to Play Store policies we have updated the Android API level this version of
 **Legacy Maps**
 
 As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed the legacy implementations for our maps. You will be switched to our new UnifiedMap automatically and should notice no differences except a couple of new features, some of which are
+=======
+### UnifiedMap roadmap & "old" maps deprecation notice
+c:geo has an all-new map implementation called "UnifiedMap" since some time, which will ultimately replace the old implementations of Google Maps and Mapsforge (OpenStreetMap). This is a deprecation notice to inform you about the further roadmap. This is a deprecation notice to inform you about the further roadmap.
+
+UnifiedMap got published about a year ago. UnifiedMap got published about a year ago. It still supports Google Maps and OpenStreetMap (online + offline), but in a completely reworked technical way, and with a lot of exciting new features that the "old" maps do not support, some of which are
+>>>>>>> release
 - Map rotation for OpenStreetMap based maps (online + offline)
 - Cluster popup for Google Maps
 - Hide map sources you don't need
@@ -63,10 +70,21 @@ As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed th
 - New: Show own favorites in log view (Geocaching.com + offline logs)
 
 ### Wherigo player
+<<<<<<< HEAD
 - New: Offline translation for Wherigos
 - New: Improved button handling
 - New: Status auto-save
 - New: Option to create shortcout to Wherigo player on your mobile's home screen
+=======
+- New: Integrated Wherigo player checking for missing credentials
+- Change: Removed Wherigo bug report (as errors are mostly cartridge-related, need to be fixed by cartridge owner)
+- New: Ability to navigate to a zone using compass
+- New: Ability to copy zone center coordinates to clipboard
+- New: Set zone center as target when opening map (to get routing and distance info for it)
+- New: Support opening local Wherigo files
+- Change: Long-tap on a zone on map is no longer recognized. Change: Long-tap on a zone on map is no longer recognized. This allows users to do other stuff in map zone area available on long-tap, eg: create user-defined cache
+- New: Display warning if wherigo.com reports missing EULA (which leads to failing download of cartridge)
+>>>>>>> release
 
 ### 通用
 - New: Share option after logging a cache

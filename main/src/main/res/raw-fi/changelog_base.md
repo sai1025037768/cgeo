@@ -1,5 +1,6 @@
 ### Yleiset julkaisumerkinnät
 
+<<<<<<< HEAD
 **Reunasta reunaan**
 
 Due to Play Store policies we have updated the Android API level this version of c:geo targets + we have changed some of the screen layout routines. This may come with some unwanted side effects, especially on newer Android versions. If you experience any problems with this version of c:geo, please report either on [GitHub](https://github.com/cgeo/cgeo) or via email to [support@cgeo.org](mailto:support@cgeo.org)
@@ -14,6 +15,24 @@ Niin kuin julkaisuissa 2025.07.17 ja 2025.12.01 ilmoitettiin, olemme viimein poi
 - Switch between lists directly from map
 - "Driving mode" for OpenStreetMap based maps
 - Pitkä napautus polulla / yksittäisellä reitillä lisävalintoja varten
+=======
+UnifiedMap julkaistiin noin vuosi sitten. Se tukee edelleen Google Mapsia ja OpenStreetMappia (online + offline), mutta täysin muokatulla teknisellä tavalla, ja paljon jännittäviä uusia ominaisuuksia, joita "vanhat" kartat eivät tue, joista osa on
+- Kartan kierto OpenStreetMapsiin perustuville karttoille (online + offline)
+- Ponnahdusikkuna Google Mapsille
+- Piilota kartan lähteet, joita et tarvitse
+- Korkeuskaavio reittejä ja jälkiä varten
+- Vaihda listojen välillä suoraan kartalta
+- "Ajotila" OpenStreetMap pohjaisille karttoille
+
+UnfiedMap on osoittautunut vakaaksi jo jonkin aikaa, joten poistamme vanhat karttojen toteutukset vähentääksemme c:geon säilyttämistä koskevia ponnisteluja.
+
+Suunnitelma:
+- "Vanhat" kartat ovat nyt vanhenemistilassa - emme enää korjaa vikoja.
+- UnifiedMap on oletusarvoinen kaikille käyttäjille syksyllä 2025.
+- "Vanhat" kartan toteutukset poistetaan keväällä 2026.
+
+Siihen asti voit vaihtaa eri toteutusten välillä asetuksissa => karttalähteet.
+>>>>>>> release
 
 ### Kartta
 - New: Route optimization caches calculated data
