@@ -226,15 +226,7 @@
     <!-- Contacts -->
     <string name="contact_not_found">Aliaksen/nimimerkin %s yhteystietoja ei löytynyt. Lisää se ensin yhteystiedot-sovellukseen.</string>
     <string name="contact_multiple_matches">Yhteystiedot: Useita osumia</string>
-<<<<<<< HEAD
     <!-- External translation -->
-=======
-    <!-- translation -->
-    <string name="translate">Käännä Google Translate-sovelluksessa</string>
-    <string name="translate_to_sys_lang">Käännä kielelle %s (verkko)</string>
-    <string name="translate_to_english">Käännä englanniksi (verkko)</string>
-    <string name="translate_length_warning">Käännös saattaa epäonnistua jos tekstiä on paljon.</string>
->>>>>>> release
     <!-- errors, warnings, info toasts -->
     <string name="err_none">OK</string>
     <string name="err_parse">Kirjautumissivun käsittely epäonnistui</string>
@@ -373,13 +365,7 @@
     <string name="translator_target_language">Käännä kielelle \"%s\"</string>
     <string name="translator_translation_error">Tekstin kääntäminen epäonnistui: %s</string>
     <string name="translator_translation_initerror">Kääntäjän alustus epäonnistui</string>
-<<<<<<< HEAD
     <string name="translator_translation_success">Käännetty kielestä \"%s\", napauta painiketta palauttaaksesi alkuperäisen</string>
-=======
-    <string name="translator_translation_success">Käännetty kielestä \"%s\".\nNapauta palauttaaksesi alkuperäisen</string>
-    <string name="crash_activity_title">Hups! c:geo kaatui!</string>
-    <string name="crash_activity_report">ilmoita ongelmasta</string>
->>>>>>> release
     <!-- location service -->
     <string name="loc_last">Viimeisin tunnettu</string>
     <string name="loc_net">Verkko</string>
@@ -2673,11 +2659,6 @@
     <string name="wherigo_download_accept_eula">Kirjaudu sisään osoitteeseen www.wherigo.com ja hyväksy niiden ehdot ensin</string>
     <string name="wherigo_error_title">Wherigon ongelmaraportti</string>
     <string name="wherigo_error_game_noerror">Wherigo Engine ei ole ilmoittanut virheitä.</string>
-<<<<<<< HEAD
-=======
-    <string name="wherigo_error_game_error">Wherigo Engine on ilmoittanut virheen:\n\n```\n%1$s\n```\nVoit ottaa yhteyttä kasetin omistajaan [täällä](%2$s)</string>
-    <string name="wherigo_error_email">Wherigo ongelmaraportti\n\nEnginen virhe: %1$s\n\nWherigon info: %2$s</string>
->>>>>>> release
     <string name="wherigo_error_toast">Wherigo Engine raportoi virheen. Avaa vikavalintaikkuna saadaksesi lisätietoja.</string>
     <string name="wherigo_confirm_stop_running_game_title">Lopeta Wherigo-pelin suorittaminen</string>
     <string name="wherigo_confirm_stop_running_game_message">Peli on käynnissä \"%s\". Haluatko pysäyttää tämän pelin?</string>
@@ -2747,16 +2728,6 @@
     </plurals>
     <!-- GC image size conversion -->
     <string name="settings_gc_imagesize_title">Ensisijainen kuvan koko</string>
-<<<<<<< HEAD
-=======
-    <string name="settings_gc_imagesize_summary">Kuvat geocaching.comista listauksissa, lokeissa ja reissaajissa ovat saatavilla eri kokoisina. Valitse koko ladattavaksi kun ladataan ja tallennetaan kätköä.</string>
-    <string-array name="settings_gc_imagesize_entries">
-        <item>Alkuperäinen</item>
-        <item>640px</item>
-        <item>320px</item>
-        <item>120px</item>
-    </string-array>
->>>>>>> release
     <!-- db inspection -->
     <string name="view_database">Näytä tietokanta</string>
     <string name="dbi_select_title">(Valitse taulukko)</string>
@@ -2768,15 +2739,4 @@
     <string name="dbi_edit_error_pkfield">"%s\" on osa ensisijaista avainta, ei voida muokata"</string>
     <string name="dbi_search_title">Hae</string>
     <string name="dbi_search_columnSelection">Rajoita</string>
-<<<<<<< HEAD
-=======
-    <!-- emoji categories -->
-    <string name="emoji_category_recent">Äskettäin käytetty</string>
-    <string name="emoji_category_symbols">Symbolit</string>
-    <string name="emoji_category_dots">Pisteet</string>
-    <string name="emoji_category_places">Paikat</string>
-    <string name="emoji_category_food">Ruoka &amp; juoma</string>
-    <string name="emoji_category_activity">Aktiviteetti</string>
-    <string name="emoji_category_people">Ihmiset</string>
->>>>>>> release
 </resources>

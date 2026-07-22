@@ -15,27 +15,6 @@ As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed th
 - "Driving mode" for OpenStreetMap based maps
 - Long-tap on track / individual route for further options
 
-<<<<<<< HEAD
-### Map
-- New: Route optimization caches calculated data
-- New: Enabling live mode keeps waypoints of currently set target visible
-- New: Long-tap on navigation line opens elevation chart (UnifiedMap)
-- New: Show generated waypoints on map
-- New: Download caches ordered by distance
-- Fix: Doubling of individual route items
-- New: Support for Motorider theme (VTM only)
-- New: NoMap tile provider (don't show map, just caches etc.)
-- Change: Max distance to connect points on history track lowered to 500m (configurable)
-- New: Allow importing KML files as tracks (eg: trackable itinerary)
-- New: Offer to set cache icon even if cache is not yet stored
-- New: Infobox for elevation chart showing remaining distance, ascent, descent
-- New: Display coordinates of waypoints in waypoint popup
-- Fix: Map quick settings may show buttons "1"/"2" for empty routing profiles after switching language
-- New: Calculate missing elevation data on importing tracks (if elevation data is downloaded)
-- Fix: Tile downloader stopping under certain conditions (OpenStreetMap online maps only)
-- New: Conditional cache markers
-- New: Show navigation hint (arrow + distance)
-=======
 ### Térkép
 - New: Show geofences for lab stages (UnifiedMap) - enable "Circles" in map quick settings to show them
 - New: Option to set circles with individual radius to waypoints ("geofence" context menu option)
@@ -55,7 +34,6 @@ As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed th
 - Fix: Compact icons not returning to large icons on zooming in in auto mode (UnifiedMap)
 - New: Long-tap actions in cache infosheet: GC code, cache title, coordinates, personal note/hint
 - Change: Switches cache infosheet long-tap for emoji selector to short tap to resolve the collision
->>>>>>> release
 
 ### Cache details
 - New: Detect additional characters in formulas: –, ⋅, ×

@@ -208,14 +208,7 @@
     <string name="log_delete_confirm">你確定要刪除日誌類型為%1$s、作者為%2$s、日期為%3$s的日誌嗎？</string>
     <string name="datetime_nodateset_display">沒有設定日期</string>
     <!-- Contacts -->
-<<<<<<< HEAD
     <!-- External translation -->
-=======
-    <string name="contact_not_found">聯絡人找不到暱稱或小名為%s的人。請先將其加入您的聯絡人。</string>
-    <string name="contact_multiple_matches">聯絡人: 多個符合項目</string>
-    <!-- translation -->
-    <string name="translate_length_warning">文字太多，翻譯失敗。</string>
->>>>>>> release
     <!-- errors, warnings, info toasts -->
     <string name="err_none">确定</string>
     <string name="err_parse">解析登入頁失敗</string>
@@ -323,23 +316,6 @@
     <string name="more_information">更多資訊</string>
     <string name="undo">復原</string>
     <string name="dont_show_again">不要再顯示</string>
-<<<<<<< HEAD
-=======
-    <string name="tap_icon_more_info">點擊圖示以獲取更多訊息</string>
-    <string name="use_slider_adjust_value">使用滑桿調整數值</string>
-    <string name="warn_gm_not_available">Google地圖不提供</string>
-    <string name="switch_to_mf">你的Google play服務已經過期。你想要切換到Mapsforge地圖嗎？</string>
-    <string name="switched_to_mf">預設地圖已切換到Mapsforge的地圖。 將重新啟動你的地圖。</string>
-    <string name="gc_premium">付費會員</string>
-    <string name="gc_basic">基本</string>
-    <string name="translator_preference_target_lng">離線翻譯語言</string>
-    <string name="translator_preference_target_lng_summary">離線翻譯的目標語言</string>
-    <string name="translator_preference_nottranslate_lng">已忽略的語言</string>
-    <string name="translator_preference_nottranslate_lng_summary">不提供翻譯的原始語言</string>
-    <string name="translator_model_download_select">下載離線翻譯語言</string>
-    <string name="translator_model_download_confirm_title">確認下載語言</string>
-    <string name="translator_model_download_confirm_txt">需要下載語言 %s 的翻譯模型。模型大小約為 20-40 MB。</string>
->>>>>>> release
     <!-- location service -->
     <string name="loc_last">上一次</string>
     <string name="loc_net">網絡</string>
@@ -655,13 +631,6 @@
     <string name="init_signature_template_log">日誌文字</string>
     <string name="init_signature_template_size">大小</string>
     <string name="init_signature_template_type">類型</string>
-<<<<<<< HEAD
-=======
-    <string name="init_signature_template_location">位置</string>
-    <string name="init_signature_template_geocode">地理藏寶編號</string>
-    <string name="init_ratingwanted">GCVoting的評價</string>
-    <string name="init_summary_ratingwanted">載入GCvote.com的評價</string>
->>>>>>> release
     <string name="init_friends_and_own_logs_wanted">顯示朋友擁有的</string>
     <string name="init_summary_friends_and_own_logs_wanted">對於朋友寫的或是自己的日誌，顯示額外的日誌頁</string>
     <string name="init_openlastdetailspage">最後的詳細資訊頁面</string>

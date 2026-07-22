@@ -559,18 +559,6 @@
     <string name="cache_filter_storage_delete_button">Ištrinti</string>
     <string name="cache_filter_storage_clear_button">Išvalyti</string>
     <string name="cache_filter_storage_select_title">Pasirinkite filtrą</string>
-<<<<<<< HEAD
-=======
-    <string name="cache_filter_storage_delete_title">Ištrinti failą</string>
-    <string name="cache_filter_storage_delete_message">Ar tikrai norite ištrinti šią filtro konfigūraciją?</string>
-    <string name="cache_filter_storage_select_clear_title">Pasirinkite filtrą arba išvalykite esamą filtrą</string>
-    <string name="cache_filter_storage_clear_title">Išvalyti esamą filtrą</string>
-    <string name="cache_filter_storage_load_delete_nofilter_message">Filtras dar nėra išsaugotas.</string>
-    <string name="cache_filter_storage_save_title">Išsaugoti filtrą su pavadinimu</string>
-    <string name="cache_filter_storage_save_confirm_title">Išsaugoti filtro perrašymą</string>
-    <string name="cache_filter_storage_save_confirm_message">Filtras su pavadinimu \'%s\' ir kitokia konfigūracija jau yra. Perrašyti?</string>
-    <string name="cache_filter_storage_clear_message">Ar norite išvalyti dabartinį filtrą?</string>
->>>>>>> release
     <string name="cache_filter_stringfilter_matchcase">Skirti raidžių lygį</string>
     <string name="cache_filter_stringfilter_searchtext_hint">Paieškos tekstas</string>
     <string name="cache_filter_stringfilter_info">Naudodami parinktį \'Ruošinys\', naudokite pakaitos simbolius * ir ?. * reiškia nulį, vieną ar kelis simbolius, ? reiškia vieną simbolį. Pavyzdžiui, ruošinys \'H?mburg*\' atitiks pvz. \'Homburg\' arba \'Hamburg naktį\', bet ne \'Diena Hamburge\' ar \'Hahmburg\'</string>
@@ -875,12 +863,6 @@
     <string name="init_signature_template_type">Tipas</string>
     <string name="init_signature_template_location">Vieta</string>
     <string name="init_signature_template_geocode">Geokodas</string>
-<<<<<<< HEAD
-=======
-    <string name="init_ratingwanted">GCvote reitingas</string>
-    <string name="init_summary_ratingwanted">Įkelti slėptuvės reitingą iš GCvote.com</string>
-    <string name="init_summary_bettercacher">Įkelkite slėptuvės pakopą ir kategorijas iš BetterCacher.org</string>
->>>>>>> release
     <string name="init_friends_and_own_logs_wanted">Rodyti draugų/nuosavas</string>
     <string name="init_summary_friends_and_own_logs_wanted">Rodyti draugų ir asmeninių įrašų žurnalo papildomą puslapį</string>
     <string name="init_openlastdetailspage">Paskutinis informacijos puslapis</string>
@@ -1526,12 +1508,6 @@
     <string name="cachedetails_progress_watch">Įtraukta į stebimų sarašą</string>
     <string name="cachedetails_progress_unwatch">Pašalinta iš stebimų sąrašo</string>
     <string name="cachedetails_progress_favorite">Pridėta prie mėgstamiausių</string>
-<<<<<<< HEAD
-=======
-    <string name="cachedetails_progress_unfavorite">Pašalinta iš mėgstamiausių</string>
-    <string name="cache_whereyougo_start">Atidarykite WhereYouGo, kad atsisiųstumėte ir paleistumėte šią kasetę</string>
-    <string name="cache_whereyougo_install">Norėdami atsisiųsti ir paleisti šią kasetę, įdiekite WhereYouGo grotuvą</string>
->>>>>>> release
     <string name="cache_chirpwolf_start">Šioje slėptuvėje gali būti naudojamas Chirp siųstuvas arba kitokio tipo belaidis švyturys. Norėdami skaityti Chirp duomenis, galite atidaryti Chirp Wolf.</string>
     <string name="cache_chirpwolf_install">Šioje slėptuvėje gali būti naudojamas Chirp siųstuvas arba kitokio tipo belaidis švyturys. Norėdami skaityti Chirp duomenis, galite įdiegti Chirp Wolf.</string>
     <string name="cache_alc_start">Atidarykite Adventure Lab, kad pradėtumėte žaisti šį nuotykį</string>
@@ -1778,20 +1754,6 @@
     <string name="google_maps_style_retro">Retro</string>
     <string name="google_maps_style_contrast">Didelis kontrastas</string>
     <string name="google_maps_style_auto">Įrenginio tema (Diena/Naktis)</string>
-<<<<<<< HEAD
-=======
-    <string name="google_maps_option_group_map">Žemėlapio parinktys</string>
-    <string name="google_maps_option_show_traffic">Rodyti eismą</string>
-    <string name="google_maps_option_show_buildings">Rodyti 3D pastatus</string>
-    <string name="google_maps_option_group_theme">Temos parinktys</string>
-    <string name="google_maps_option_show_feature_theme">Rodyti temos funkcijas</string>
-    <string name="google_maps_option_show_feature_administrative_all">Rodyti administracinį</string>
-    <string name="google_maps_option_show_feature_landscape_all">Rodyti kraštovaizdį</string>
-    <string name="google_maps_option_show_feature_poi_all">Rodyti lankytinas vietas</string>
-    <string name="google_maps_option_show_feature_road_all">Rodyti kelius</string>
-    <string name="google_maps_option_show_feature_transit_all">Rodyti visuomeninį transportą</string>
-    <string name="google_maps_option_show_feature_water_all">Rodyti vandenį</string>
->>>>>>> release
     <!-- search -->
     <string name="geo_search_label">Ieškoti slėptuvių netoliese</string>
     <string name="search_bar_hint">Ieškoti slėptuvių/keliauninkų</string>
@@ -2603,26 +2565,5 @@
         <item quantity="other">%d neskaitytų pranešimų pranešimų centre</item>
     </plurals>
     <!-- GC image size conversion -->
-<<<<<<< HEAD
     <!-- db inspection -->
-=======
-    <string name="settings_gc_imagesize_title">Pageidaujamas vaizdo dydis</string>
-    <string-array name="settings_gc_imagesize_entries">
-        <item>Originalus</item>
-        <item>640px</item>
-        <item>320px</item>
-        <item>120px</item>
-    </string-array>
-    <!-- db inspection -->
-    <string name="view_database">Peržiūrėti duomenų bazę</string>
-    <string name="dbi_select_title">(Pasirinkite lentelę)</string>
-    <string name="dbi_columnproperties_title">Stulpelių savybės</string>
-    <string name="dbi_columnproperties_message">Laukas: %1$s\nTipas: %2$s\nSaugykla: %3$s</string>
-    <string name="dbi_edit_title">Redaguoti „%1$s“ eilutės %2$d“</string>
-    <string name="dbi_edit_ok">Laukelis atnaujintas</string>
-    <string name="dbi_edit_error">Klaida atnaujinant lauką</string>
-    <string name="dbi_edit_error_pkfield">"%s yra pirminio rakto dalis, jo negalima redaguoti"</string>
-    <string name="dbi_search_title">Ieškoti</string>
-    <!-- emoji categories -->
->>>>>>> release
 </resources>

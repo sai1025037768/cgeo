@@ -1,6 +1,5 @@
 ### General release notes
 
-<<<<<<< HEAD
 **Edge to Edge**
 
 Due to Play Store policies we have updated the Android API level this version of c:geo targets + we have changed some of the screen layout routines. This may come with some unwanted side effects, especially on newer Android versions. If you experience any problems with this version of c:geo, please report either on [GitHub](https://github.com/cgeo/cgeo) or via email to [support@cgeo.org](mailto:support@cgeo.org)
@@ -8,9 +7,6 @@ Due to Play Store policies we have updated the Android API level this version of
 **Legacy Maps**
 
 As announced with 2025.07.17 and 2025.12.01 releases, we have finally removed the legacy implementations for our maps. You will be switched to our new UnifiedMap automatically and should notice no differences except a couple of new features, some of which are
-=======
-UnifiedMap got published about a year ago. UnifiedMap got published about a year ago. It still supports Google Maps and OpenStreetMap (online + offline), but in a completely reworked technical way, and with a lot of exciting new features that the "old" maps do not support, some of which are
->>>>>>> release
 - Map rotation for OpenStreetMap based maps (online + offline)
 - Cluster popup for Google Maps
 - Hide map sources you don't need
@@ -19,7 +15,6 @@ UnifiedMap got published about a year ago. UnifiedMap got published about a year
 - "Driving mode" for OpenStreetMap based maps
 - Long-tap on track / individual route for further options
 
-<<<<<<< HEAD
 ### Map
 - New: Route optimization caches calculated data
 - New: Enabling live mode keeps waypoints of currently set target visible
@@ -66,36 +61,6 @@ UnifiedMap got published about a year ago. UnifiedMap got published about a year
 - Change: Store cache before adding user image
 - Fix: Crash on loading images embedded directly in listing text
 - New: Show own favorites in log view (Geocaching.com + offline logs)
-=======
-### 地圖
-- New: Show geofences for lab stages (UnifiedMap) - enable "Circles" in map quick settings to show them
-- New: Option to set circles with individual radius to waypoints ("geofence" context menu option)
-- Fix: Map view not updated when removing cache from currently shown list
-- Fix: Number of cache in list chooser not updated on changing list contents
-- Change: Keep current viewport on mapping a list, if all caches fit into current viewport
-- New: Follow my location in elevation chart (UnifiedMap)
-- New: Enable "move to" / "copy to" actions for "show as list"
-- New: Support Elevate Winter theme in map downloader
-- New: Adaptive hillshading, optional high quality mode (UnifiedMap Mapsforge)
-- New: Redesigned routes/tracks quick settings dialog
-- New: Long tap on map selection icon to select previous tile provider (UnifiedMap)
-- New: Allow setting display name for offline maps in companion file (UnifiedMap)
-- New: Long tap on "enable live button" to load offline caches
-- New: Offline hillshading for UnifiedMap (VTM variant)
-- New: Support for background maps (UnifiedMap)
-- Fix: Compact icons not returning to large icons on zooming in in auto mode (UnifiedMap)
-- New: Long-tap actions in cache infosheet: GC code, cache title, coordinates, personal note/hint
-- Change: Switches cache infosheet long-tap for emoji selector to short tap to resolve the collision
-
-### Cache 細節
-- New: Offline translation of listing text and logs (experimental)
-- New: Option to share cache with user data (coordinates, personal note)
-- Fix: Speech service interrupted on screen rotation
-- Fix: Cache details: Lists for cache not updated after tapping on list name an removing that cache from that list
-- Fix: User note gets lost on refreshing a lab adventure
-- Change: Log-date related placeholders will use chosen date instead of current date
-- New: Collapse long log entries per default
->>>>>>> release
 
 ### Wherigo player
 - New: Offline translation for Wherigos
@@ -103,7 +68,6 @@ UnifiedMap got published about a year ago. UnifiedMap got published about a year
 - New: Status auto-save
 - New: Option to create shortcout to Wherigo player on your mobile's home screen
 
-<<<<<<< HEAD
 ### General
 - New: Share option after logging a cache
 - Change: Do not show "needs maintenance" or "needs archived" options for own caches
@@ -134,26 +98,3 @@ UnifiedMap got published about a year ago. UnifiedMap got published about a year
 - Fix: "Use imperial settings" not initialized correctly on fresh installs
 - Change: Bergamot open source offline translation module replacing closed-source Google ML Kit translator
 - Change: New emoji selector
-=======
-### 一般
-- New: Redesigned search page
-- New: Inventory count filter
-- New: Support for coordinates in DD,DDDDDDD format
-- New: Show last used filter name in filter dialog
-- New: Coordinate calculator: Function to replace "x" with multiplication symbol
-- Fix: Incorrect altitude (not using mean above sea level)
-- Fix: Nearby distance limit setting not working properly for small values
-- Fix: Sorting of cache lists by distance descending not working correctly
-- Fix: Lab caches excluded by D/T filter even with active "include uncertain"
-- Fix: Color issues with menu icons in light mode
-- New: Add "Remove past events" to list "all"
-- New: Show connector for "user-defined caches" as active in source filter
-- New: GPX export: exporting logs / trackables made optional
-- New: Added button to delete log templates
-- Fix: Importing local map file gets random map name
-- Fix: Map downloader offering broken (0 bytes) files for download
-- New: Added mappings for some missing OC cache types
-- New: Move "recently used" lists in list selection dialog to the top on pressing "recently used" button
-- New: Share list of geocodes from cache list
-- Change: "Navigation (car)" etc. use "q=" parameter instead of outdated "ll=" parameter
->>>>>>> release

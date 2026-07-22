@@ -220,15 +220,7 @@
     <!-- Contacts -->
     <string name="contact_not_found">找不到别名/昵称为%s的联系人，请先将它添加到你的联系人应用中。</string>
     <string name="contact_multiple_matches">联系人: 多个匹配</string>
-<<<<<<< HEAD
     <!-- External translation -->
-=======
-    <!-- translation -->
-    <string name="translate">在谷歌翻译应用翻译</string>
-    <string name="translate_to_sys_lang">翻译为 %s (网络)</string>
-    <string name="translate_to_english">翻译为英语（网页）</string>
-    <string name="translate_length_warning">对大量文本进行翻译可能会失败。</string>
->>>>>>> release
     <!-- errors, warnings, info toasts -->
     <string name="err_none">确定</string>
     <string name="err_parse">登录页解析失败</string>
@@ -1980,15 +1972,5 @@
     <!-- Smileys GC / OC -->
     <!-- message center notifications -->
     <!-- GC image size conversion -->
-<<<<<<< HEAD
-=======
-    <string name="settings_gc_imagesize_summary">在Geocaching.com的列表、日志和可追踪物中图片大小不同。请选择加载和存储藏点时要加载的图片大小。</string>
-    <string-array name="settings_gc_imagesize_entries">
-        <item>原始坐标</item>
-        <item>640px</item>
-        <item>320px</item>
-        <item>120px</item>
-    </string-array>
->>>>>>> release
     <!-- db inspection -->
 </resources>

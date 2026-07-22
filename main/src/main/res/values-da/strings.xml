@@ -199,14 +199,7 @@
     <string name="log_delete_confirm">Er du sikker at du vil slette loggen af typen \'%1$s\' af forfatteren \'%2$s\' med logdato \'%3$s\'?</string>
     <string name="datetime_nodateset_display">Ingen dato angivet</string>
     <!-- Contacts -->
-<<<<<<< HEAD
     <!-- External translation -->
-=======
-    <string name="contact_not_found">Kontakt med alias/brugernavn %s blev ikke fundet. Tilføj først kontakten under dine kontakter.</string>
-    <!-- translation -->
-    <string name="translate">Oversæt i Google Oversæt App</string>
-    <string name="translate_length_warning">Oversættelse af lange tekster kan fejle.</string>
->>>>>>> release
     <!-- errors, warnings, info toasts -->
     <string name="err_none">Ok</string>
     <string name="err_parse">Login-side kan ikke indlæses</string>
@@ -310,18 +303,6 @@
     <string name="more_information">Mere information</string>
     <string name="undo">Fortryd</string>
     <string name="dont_show_again">Vis ikke dette igen</string>
-<<<<<<< HEAD
-=======
-    <string name="tap_icon_more_info">Tryk på ikonet for mere info</string>
-    <string name="use_slider_adjust_value">Brug skyderen til at justere værdien</string>
-    <string name="warn_gm_not_available">Google Maps er ikke tilgængelig.</string>
-    <string name="switch_to_mf">Google Play Tjenesten er forældet. Ønsker du at skifte til Mapsforge korttjenesten i stedet?</string>
-    <string name="switched_to_mf">Standardkort er skiftet til Mapsforge korttjenesten. Genstart dit kort nu.</string>
-    <string name="gc_premium">Premium</string>
-    <string name="gc_basic">Basis</string>
-    <string name="crash_activity_title">Oops! c:geo blev afbrudt!</string>
-    <string name="crash_activity_report">anmeld problem</string>
->>>>>>> release
     <!-- location service -->
     <string name="loc_last">Sidst kendte</string>
     <string name="loc_net">Netværk</string>
@@ -669,12 +650,6 @@
     <string name="init_signature_template_log">Logtekst</string>
     <string name="init_signature_template_size">Størrelse</string>
     <string name="init_signature_template_type">Type</string>
-<<<<<<< HEAD
-=======
-    <string name="init_signature_template_geocode">Geokode</string>
-    <string name="init_ratingwanted">GCVote vurdering</string>
-    <string name="init_summary_ratingwanted">Indlæs cachebedømmelser fra GCVote.com</string>
->>>>>>> release
     <string name="init_friends_and_own_logs_wanted">Vis venners/egne</string>
     <string name="init_summary_friends_and_own_logs_wanted">Vis en særskilt logbogsside med venners og egne logbeskeder</string>
     <string name="init_openlastdetailspage">Åbn sidste detaljeside</string>
@@ -962,11 +937,6 @@
     <string name="cache_images">Billeder</string>
     <string name="cache_advanced">Avanceret</string>
     <string name="cache_waypoints">Rutepunkter</string>
-<<<<<<< HEAD
-=======
-    <string name="cache_waypoints_add">Tilføj waypoint</string>
-    <string name="cache_waypoints_add_currentLocation">Tilføj nuværende position</string>
->>>>>>> release
     <string name="cache_waypoints_add_fromclipboard">Tilføj fra udklipsholder</string>
     <string name="cache_waypoints_hide_visited_waypoints">Skjul besøgte waypoints</string>
     <string name="cache_waypoints_remove_original_waypoint">Rutepunkt kopieret fra udklipsholder til denne cache.\n\nFjern originalt rutepunkt?</string>
@@ -1070,13 +1040,6 @@
     <string name="cache_share_field">Del</string>
     <string name="cache_time_full_hours">klokken</string>
     <string name="cache_listed_on">Fra %s</string>
-<<<<<<< HEAD
-=======
-    <string name="cache_wherigo_cartridge_not_downloaded">%s - ikke hentet</string>
-    <string name="cache_wherigo_start">Hent og afspil denne Wherigo med c:geo\'s indbyggede afspiller</string>
-    <string name="cache_whereyougo_start">Hent og start denne cartridge med WhereYouGo</string>
-    <string name="cache_whereyougo_install">Installér WhereYouGo for at hente og starte denne cartridge</string>
->>>>>>> release
     <string name="context_share_as_text">Del tekst</string>
     <string name="context_share_as_link">Del link</string>
     <string name="image_category_own">Egne</string>
@@ -1192,13 +1155,6 @@
     <string name="map_select_multiple_items">Vælg element</string>
     <string name="quick_settings">Hurtige indstillinger</string>
     <string name="quick_settings_info">Nogle kortindstillinger (kortindstillinger, Skjul, vejvisning) er blevet flyttet til det nye popup-vindue \"Hurtige indstillinger\".\nDu kan åbne dette vindue med ikonet forneden på kortet.</string>
-<<<<<<< HEAD
-=======
-    <string name="zoom_in">Zoom ind</string>
-    <string name="zoom_out">Zoom ud</string>
-    <string name="google_maps_style_classic">Klassisk</string>
-    <string name="google_maps_option_group_theme">Indstillinger for tema</string>
->>>>>>> release
     <!-- search -->
     <string name="geo_search_label">Søg i caches i nærheden</string>
     <string name="search_bar_hint">Søg caches/trackables</string>
@@ -1209,11 +1165,6 @@
     <string name="search_kw">Nøgleord</string>
     <string name="search_hbu">Udlagt af</string>
     <string name="search_finder">Fundet af</string>
-<<<<<<< HEAD
-=======
-    <string name="search_filter">Filter</string>
-    <string name="search_filter_info_message" formatted="false">**Søg med filter** søger caches på alle aktive online tjenester (f.eks. geocaching.com) ud fra et angivet filter. Men, søgefaciliteterne på disse tjenester er normalt mere begrænset end c:geos søgefelter.\n\n- Alle tjenester understøtter kun OG-filtre (ingen ELLER-filtre og ingen omvendte filtre).\n- De mere grundlæggende filtre som **cache type** eller **cache størrelse** understøttes af alle tjenester. Mere komplicerede filtre understøttes ofte ikke eller har visse begrænsninger, f.eks. **favoritter** eller **skjult dato**.\n- En detaljeret liste over understøttede filtre pr. tjeneste kan findes [her](https://github.com/cgeo/cgeo/wiki/%22Search-by-Filter%22-support-by-c:geo-Connectors).\n\nFiltre som ikke understøttes af online-tjenesten vil blive anvendt af c:geo på de modtagne resultater.</string>
->>>>>>> release
     <string name="search_tb">Trackable</string>
     <string name="search_destination">Åbn destinationen i c:geo</string>
     <string name="search_address_started">Søger efter steder</string>
